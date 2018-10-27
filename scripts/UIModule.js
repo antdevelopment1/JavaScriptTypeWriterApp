@@ -51,15 +51,17 @@ var UIModule = (function() {
 
         emptyInput: function(){},
 
+        getTypedWord: function(){},
+
         // Test Words
         fillContent: function(){}, 
 
-        formatCurrentWord: function(){}, 
+        formatWord: function(wordObject, wordHTML){}, 
 
-        setActiveWord: function(){},
+        setActiveWord: function(index){},
 
         deactivateCurrentWord: function(){}, 
-        
+
         scroll: function(){},
 
     };
