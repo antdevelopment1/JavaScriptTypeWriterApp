@@ -19,7 +19,10 @@ var dataModule = (function() {
             wpm: 0, 
             wpmChange: 0, 
             cpm: 0, cpmChange: 0, 
-            accuracy: 0, accuracyChange: 0
+            accuracy: 0, accuracyChange: 0,
+            numOfCorrectWords: 0,
+            numOfCorrectCharacters: 0,
+            numOfTestCharacters: 0   
         },
 
         words: {
@@ -27,7 +30,15 @@ var dataModule = (function() {
             testWords: [], 
             currentWord: {
                 value: {
-                    correct: '', user: ''
+                    correct: '', 
+                    user: '',
+                    isCorrect: false
+                },
+                characters: {
+                    correct: [],
+                    user: [],
+                    totalCorrect: 0,
+                    totalTest: 0
                 }
             } 
         },
