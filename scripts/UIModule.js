@@ -36,12 +36,12 @@ var UIModule = (function() {
 
         // User Input
         inputFocus: function(){}, isNameEmpty: function(){}, flagNameInput: function(){},
-        spacePressed(): function(){}, enterPressed(): function(){}, emptyInput(): function(){},
+        spacePressed: function(){}, enterPressed: function(){}, emptyInput: function(){},
 
         // Test Words
         fillContent: function(){}, formatCurrentWord: function(){}, setActiveWord: function(){},
         deactivateCurrentWord: function(){}, scroll: function(){},
 
     };
-    
+
 }());
