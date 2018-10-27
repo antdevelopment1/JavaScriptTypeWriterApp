@@ -23,7 +23,13 @@ var myModule = (function() {
             return x;   
         },
         f2: function() {
-            return car;
+            // When we return an object and objects are passed by reference not by value. Meaning we are not returning a read only value
+            // We are returning a reference to the object car making it easily mutable. We can fix this by instead returning a new object like this
+            // return car;
+            return {
+                make: car.make,
+                model: car.model
+            }
         }
     }
 })();
@@ -34,8 +40,11 @@ console.log(myModule.f1());
 // Calls myModule and invokes the key's function for f2
 console.log(myModule.f2());
 
-// Reassigns the value of model to A6 as opposed to a#=3
+// Tries to reassign the value of model to A6 as opposed to A3
 myModule.f2().model = 'A6';
+
+// We keep our original protecting our object from being changed
+console.log(myModule.f2().model);
 
 // Calls the function with modified object
 console.log(myModule.f2());
