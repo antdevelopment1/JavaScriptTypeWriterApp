@@ -2,7 +2,7 @@
 // Events Module
 // ==============
 
-var eventsModule = (function() {
+var eventsModule = (function(dModule, uModule, cModule, wModule) {
 
     // =================
     // Private Variables
@@ -15,7 +15,7 @@ var eventsModule = (function() {
 
         // Click on restart button event listener
 
-    }
+    };
  
     // ================
     // Public Variables
@@ -26,7 +26,7 @@ var eventsModule = (function() {
         init: function(duration, testNumber) {
 
             addEventListeners();
-            
+
         }
     };  
-}());
+}(dataModule, UIModule, certificateModule, wordsModule));

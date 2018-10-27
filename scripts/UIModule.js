@@ -4,6 +4,7 @@ var UIModule = (function() {
     // Private Variables
     // =================
 
+    // Classes used to select HTML elements
     var DOMElments = {
 
         // Indicators / Test Control
@@ -30,7 +31,7 @@ var UIModule = (function() {
 
         // Get DOM Elements
         getDOMElements: function(){},
-        
+
         // Indicators / Test Control
         updateTimeLeft: function(){},
 

@@ -23,5 +23,8 @@ var wordsModule = (function() {
             return words[textNumber];
         }
 
-    }
+    };
 }());
+
+
+

@@ -29,21 +29,21 @@ var dataModule = (function() {
             currentWordIndex: 0, 
             testWords: [], 
             currentWord: {
-                value: {
-                    correct: '', 
-                    user: '',
-                    isCorrect: false
-                },
-                characters: {
-                    correct: [],
-                    user: [],
-                    totalCorrect: 0,
-                    totalTest: 0
-                }
+                // value: {
+                //     correct: '', 
+                //     user: '',
+                //     isCorrect: false
+                // },
+                // characters: {
+                //     correct: [],
+                //     user: [],
+                //     totalCorrect: 0,
+                //     totalTest: 0
+                // }
             } 
         },
     };
-    var word = function(){}; // Word constructor
+    var word = function(index){}; // Word constructor
 
     word.prototype.update =  function(value){}; // Update method  
 
@@ -85,7 +85,7 @@ var dataModule = (function() {
 
             getListOfWords: function(){}, //Get List of test words words.testWords
 
-            moveToNewWord: function(){}, //Updated current word by creating a new instance of the word class
+            moveToNewWord: function(){}, //Increments the currentWordIndex - Updated current word by creating a new instance of the word class - updates numOfCharacters, numOfCorrectWords, and numOfTestCharacters
 
             updateCurrentWord: function(value){} // Update current word using user input
 
