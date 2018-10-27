@@ -7,10 +7,34 @@ var dataModule = (function() {
 
     // Indicators / Test Control / Test Tesults
     var appData = {
-        indicators: {testStarted: false, testEnded: false, totalTestTime: 0, timeLeft: 0},
-        results: {wpm: 0, wpmChange: 0, cpm: 0, cpmChange: 0, accuracy: 0, accuracyChange: 0},
-        words: {currentWordIndex: 0, testWords: [] },
+
+        indicators: {
+            testStarted: false, 
+            testEnded: false, 
+            totalTestTime: 0, 
+            timeLeft: 0
+        },
+
+        results: {
+            wpm: 0, 
+            wpmChange: 0, 
+            cpm: 0, cpmChange: 0, 
+            accuracy: 0, accuracyChange: 0
+        },
+
+        words: {
+            currentWordIndex: 0, 
+            testWords: [], 
+            currentWord: {
+                value: {
+                    correct: '', user: ''
+                }
+            } 
+        },
     };
+    var word = function(){}; // Word constructor
+
+    word.prototype.update =  function(value){}; // Update method  
 
         // ================
         // Public Variables
@@ -34,6 +58,7 @@ var dataModule = (function() {
 
             testStarted: function() {}, // Checks if the test has started
 
+
             // Typing Test Results
             calculateWom: function() {}, // Calculates wpm and wpmChange and updates them in appData
 
@@ -41,10 +66,15 @@ var dataModule = (function() {
 
             calculateAccuracy: function() {}, //Calculates accuracy and accuracyChange and updates them in appData
 
+
             // Test Words
             fillsListOfWords: function(textNumber) {}, // Fills words.testWords
-            
-            getListOfWords: function(){} //Get List of test words words.testWords
+
+            getListOfWords: function(){}, //Get List of test words words.testWords
+
+            moveToNewWord: function(){}, //Updated current word by creating a new instance of the word class
+
+            updateCurrentWord: function(value){} // Update current word using user input
 
         };
 }());
