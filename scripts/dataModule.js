@@ -69,6 +69,8 @@ var dataModule = (function() {
 
             testStarted: function() {}, // Checks if the test has started
 
+            getTimeLeft: function() {}, // Get time left: appData.timeLeft
+
 
             // Typing Test Results
             calculateWom: function() {}, // Calculates wpm and wpmChange and updates them in appData
