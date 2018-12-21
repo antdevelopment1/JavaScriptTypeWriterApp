@@ -5,24 +5,24 @@ var UIModule = (function() {
     // =================
 
     // Classes used to select HTML elements
-    var DOMElments = {
+    // var DOMElments = {
 
-        // Indicators / Test Control
-        timeLeft, // HTML element displaying time left
+    //     // Indicators / Test Control
+    //     timeLeft, // HTML element displaying time left
 
-        // Test Results
-        wpm, wpmChange, cpm, cpmChange, accuracy, accuracyChange,
+    //     // Test Results
+    //     wpm, wpmChange, cpm, cpmChange, accuracy, accuracyChange,
 
-        // User Input
-        textInput, nameInput,
+    //     // User Input
+    //     textInput, nameInput,
 
-        // Test Words
-        content, activeWord,
+    //     // Test Words
+    //     content, activeWord,
 
-        // Modal
-        modal
+    //     // Modal
+    //     modal
 
-    };
+    // };
 
     // ================
     // Public Variables
