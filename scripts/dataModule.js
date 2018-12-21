@@ -1,6 +1,26 @@
 // IIFE dataModule
 var dataModule = (function() {
 
+    // Shuffle function
+    var shuffle = function (array) {
+        var newArray = [];
+        var randomIndex;
+        var randomElement;
+        while (array.length > 0) {
+            // Take a random element from array and it to new array
+            randomIndex = Math.floor(Math.random() * array.length);
+            randomElement = array[randomIndex];
+            newArray.push(randomElement);
+            // Delete random element
+            array.splice(randomIndex, 1);
+        }
+        return newArray;
+    };
+
+    // Capitalize random function
+
+    // Add random punctuation function
+
     // =================
     // Private Variables
     // =================
@@ -79,9 +99,24 @@ var dataModule = (function() {
 
             calculateAccuracy: function() {}, //Calculates accuracy and accuracyChange and updates them in appData
 
-
+            // ==========
             // Test Words
-            fillsListOfWords: function(textNumber) {}, // Fills words.testWords
+            // ==========
+
+            // Fills words.testWords
+            fillsListOfTestWords: function(textNumber, words) {
+                var result = words.split(" ");
+                
+                if (textNumber == 0 ) {
+                    // Shuffle words
+
+                    // Capiitalize random strings
+
+                    // Add random puncutation
+
+                }
+                appData.words.testWords = result;
+            }, 
 
             getListOfWords: function(){}, //Get List of test words words.testWords
 
