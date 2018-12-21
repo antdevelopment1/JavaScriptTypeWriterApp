@@ -26,7 +26,7 @@ var eventsModule = (function(dModule, uModule, cModule, wModule) {
         init: function(duration, testNumber) {
 
             // Fill the list of test words: UI Module
-            var words = wModule.getWords(textNumber);
+            var words = wModule.getWords(testNumber);
 
             dModule.fillsListOfTestWords(testNumber, words);
 

@@ -137,10 +137,11 @@ var dataModule = (function() {
                 
                 if (textNumber == 0 ) {
                     // Shuffle words
-
+                    result = shuffle(result);
                     // Capiitalize random strings
-
+                    result = capaitalizeRandom(result);
                     // Add random puncutation
+                    result = addRandomPunctuation(result);
 
                 }
                 appData.words.testWords = result;
@@ -150,7 +151,11 @@ var dataModule = (function() {
 
             moveToNewWord: function(){}, //Increments the currentWordIndex - Updated current word by creating a new instance of the word class - updates numOfCharacters, numOfCorrectWords, and numOfTestCharacters
 
-            updateCurrentWord: function(value){} // Update current word using user input
+            updateCurrentWord: function(value){}, // Update current word using user input
+
+            returnData() {
+                console.log(appData);
+            }
 
         };
 }());
