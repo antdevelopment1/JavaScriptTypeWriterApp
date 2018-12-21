@@ -25,6 +25,27 @@ var eventsModule = (function(dModule, uModule, cModule, wModule) {
         // Init function intializes the test before start
         init: function(duration, testNumber) {
 
+            // Fill the list of test words: UI Module
+            var words = wModule.getWords(textNumber);
+
+            dModule.fillsListOfTestWords(testNumber, words);
+
+            // Set the total test time
+
+            // Update the time left: Data Module
+
+            // Update the time left: UI Module
+
+            // Move to a new word: Data Module
+
+            // Set active word: UI Module
+
+            // Format the active word: UI Module
+
+            // Focus on texy input: UI Module
+
+            // Add all event listeners
+
             addEventListeners();
 
         }
