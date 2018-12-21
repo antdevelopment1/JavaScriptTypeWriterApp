@@ -17,8 +17,25 @@ var dataModule = (function() {
         return newArray;
     };
 
-    // Capitalize random function
+    // Capitalize first letter of a string
+    String.prototype.capaitalize = function() {
+        var newString = '';
+        var firstCharCap = this.charAt(0).toUpperCase();
+        // Start to slice at the element with an index of 1 and goes all the way until end
+        var remainingChar = this.slice(1);
+        newString = firstCharCap + remainingChar;
+        return newString;
+    }
 
+    // Capitalize random function
+    var capaitalizeRandom = function(arrayOfStrings) {
+        return arrayOfStrings.map(function(currentWord) {
+            return currentWord.capaitalize();
+        })
+    }
+
+    var words = ['word1', 'word2', 'word3', 'word1', 'word2', 'word3'];
+    console.log(capaitalizeRandom(words))
     // Add random punctuation function
 
     // =================
