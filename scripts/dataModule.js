@@ -1,6 +1,6 @@
 // IIFE dataModule
 var dataModule = (function() {
-
+    var lineReturn = '|';
     // Shuffle function
     var shuffle = function (array) {
         var newArray = [];
@@ -30,13 +30,24 @@ var dataModule = (function() {
     // Capitalize random function
     var capaitalizeRandom = function(arrayOfStrings) {
         return arrayOfStrings.map(function(currentWord) {
-            return currentWord.capaitalize();
+            var x = Math.floor(4 * Math.random());
+
+            return (x == 3) ? currentWord.capaitalize() : currentWord;
         })
     }
 
-    var words = ['word1', 'word2', 'word3', 'word1', 'word2', 'word3'];
-    console.log(capaitalizeRandom(words))
     // Add random punctuation function
+    var addRandomPunctuation = function(arrayOfStrings) {
+        return arrayOfStrings.map(function (currentWord) {
+            var randomPunctuation;
+            var items = [lineReturn, '?', ',' , ',' , ',' , ',' , ',', '.', '.', '.', '!', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',];
+            var randomIndex = Math.floor(Math.random() * items.length);
+            randomPunctuation = items[randomIndex];
+            return currentWord + randomPunctuation;
+        });
+    };
+    var array = ['word1', 'word2', 'word3', 'word1', 'word2', 'word3', 'word1', 'word2', 'word3', 'word1', 'word2', 'word3'];
+    console.log(addRandomPunctuation(array));
 
     // =================
     // Private Variables
