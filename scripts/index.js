@@ -35,17 +35,17 @@ var myModule = (function() {
 })();
 
 // Calls myModule and invokes the key's function for f1
-console.log(myModule.f1());
+// console.log(myModule.f1());
 
 // Calls myModule and invokes the key's function for f2
-console.log(myModule.f2());
+// console.log(myModule.f2());
 
 // Tries to reassign the value of model to A6 as opposed to A3
-myModule.f2().model = 'A6';
+// myModule.f2().model = 'A6';
 
 // We keep our original protecting our object from being changed
-console.log(myModule.f2().model);
+// console.log(myModule.f2().model);
 
 // Calls the function with modified object
-console.log(myModule.f2());
+// console.log(myModule.f2());
 
