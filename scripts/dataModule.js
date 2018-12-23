@@ -72,7 +72,7 @@ var dataModule = (function() {
         },
 
         words: {
-            currentWordIndex: 0, 
+            currentWordIndex: -1, 
             testWords: [], 
             currentWord: {
                 // value: {
@@ -89,7 +89,21 @@ var dataModule = (function() {
             } 
         },
     };
-    var word = function(index){}; // Word constructor
+
+    // Word constructor
+    var word = function(index){
+        this.value = {
+            correct: appData.words.testWords[index] + " ",
+            user: '',
+            isCorrect: false
+        };
+        this.characters = {
+            correct: this.value.correct.split(''),
+            user: [],
+            totalCorrect: 0,
+            totalTest: this.value.correct.length
+        };
+    }; 
 
     word.prototype.update =  function(value){}; // Update method  
 
@@ -159,7 +173,22 @@ var dataModule = (function() {
                 return appData.words.testWords;
             }, 
 
-            moveToNewWord: function(){}, // Increments the currentWordIndex - Updated current word by creating a new instance of the word class - updates numOfCharacters, numOfCorrectWords, and numOfTestCharacters
+            // Increments the currentWordIndex - Updated current word by creating a new instance of the word class - updates numOfCharacters, numOfCorrectWords, and numOfTestCharacters
+            moveToNewWord: function(){
+                
+                if (appData.words.currentWordIndex > -1) {
+                    // Update the number of correct words
+
+                    // Update the number of correct characters
+
+                    // Update number of test words
+                }
+
+                appData.words.currentWordIndex++;
+                var currentIndex = appData.words.currentWordIndex
+                var newWord = new word(currentIndex);
+                appData.words.currentWord = newWord;
+            }, 
 
             updateCurrentWord: function(value){}, // Update current word using user input
 
