@@ -5,24 +5,58 @@ var UIModule = (function() {
     // =================
 
     // Classes used to select HTML elements
-    // var DOMElments = {
+    var DOMElments = {
 
-    //     // Indicators / Test Control
-    //     timeLeft, // HTML element displaying time left
+        // Indicators / Test Control
+        timeLeft: '', // HTML element displaying time left
 
-    //     // Test Results
-    //     wpm, wpmChange, cpm, cpmChange, accuracy, accuracyChange,
+        // Test Results
+        wpm: '',
+        wpmChange: '', 
+        cpm: '', 
+        cpmChange: '', 
+        accuracy: '', 
+        accuracyChange: '',
 
-    //     // User Input
-    //     textInput, nameInput,
+        // User Input
+        textInput: '', 
+        nameInput: '',
 
-    //     // Test Words
-    //     content, activeWord,
+        // Test Words
+        content: document.getElementById('content'),
+        activeWord: '',
 
-    //     // Modal
-    //     modal
+        // Modal
+        modal: ''
 
-    // };
+    };
+
+    var splitArray = function(string) {
+        return string.split('');
+    };
+
+    var addSpace = function(array) {
+        array.push(' ');
+        return array;
+    };
+
+    var addSpanTags = function(array) {
+        return array.map(function(currentCharacter) {
+            return '<span>' + currentCharacter + '</span>';
+        });
+    };
+
+    var addWordSpanTags = function(array) {
+        array.push('</span>');
+        array.unshift('<span>');
+        return array;
+    };
+
+    var joinEachWord = function(array) {
+        return array.join('');
+    };
+
+    
 
     // ================
     // Public Variables
@@ -58,7 +92,21 @@ var UIModule = (function() {
         getTypedWord: function(){},
 
         // Test Words
-        fillContent: function(){}, 
+        fillContent: function(array, lineReturn){
+            var content = array.map(splitArray);
+            content = content.map(addSpace);
+            content = content.map(addSpanTags);
+            content = content.map(addWordSpanTags);
+            content = content.map(joinEachWord);
+            content = content.join('');
+            // This line of code wiill not work so the next line is a solution we can us to change all pipe characters into carrage returns
+            // content = content.replace('<span>|</span>', '<span>&crarr;</span>');
+            content = content.split('<span>|</span>').join('<span>&crarr;</span>')
+            console.log(content)
+
+            DOMElments.content.innerHTML = content;
+         
+        }, 
 
         formatWord: function(wordObject, wordHTML){}, 
 
