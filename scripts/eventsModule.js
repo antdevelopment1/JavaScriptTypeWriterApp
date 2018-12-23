@@ -44,6 +44,7 @@ var eventsModule = (function(dModule, uModule, cModule, wModule) {
             uModule.updateTimeLeft(timeLeft);
             
             // Move to a new word: Data Module
+            dModule.moveToNewWord();
             
             // Set active Word: UI Module
             
