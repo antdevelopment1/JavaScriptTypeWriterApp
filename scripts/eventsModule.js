@@ -24,27 +24,26 @@ var eventsModule = (function(dModule, uModule, cModule, wModule) {
         // Init function, initializes the test before start
         init: function(duration, textNumber){
             
-            // Fill the list of test words: data Module
-          
+            // Fill the list of test words: Data Module
             var words = wModule.getWords(textNumber);
             dModule.fillListOfTestWords(textNumber, words);
             
             // Fill the list of test words: UI Module
-            // var lineReturn = dModule.getLineReturn();
-            // var testWords = dModule.getListOfTestWords();
-            // uModule.fillContent(testWords);
-
             var lineReturn = dModule.getLineReturn();
             var testWords = dModule.getListOfTestWords();
             uModule.fillContent(testWords, lineReturn);
             
             // Set the total test time
+            dModule.setTestTime(duration);
             
-            // Update time left: data Module
+            // Update time left: Data Module
+            dModule.initializeTimeLeft();
             
             // Update time left: UI module
+            var timeLeft = dModule.getTimeLeft();
+            uModule.updateTimeLeft(timeLeft);
             
-            // Move to a new word: data Module
+            // Move to a new word: Data Module
             
             // Set active Word: UI Module
             
