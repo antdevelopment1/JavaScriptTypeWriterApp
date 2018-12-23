@@ -8,26 +8,26 @@ var UIModule = (function() {
     var DOMElments = {
 
         // Indicators / Test Control
-        timeLeft: '', // HTML element displaying time left
+        timeLeft: document.getElementById('timeLeft'), // HTML element displaying time left
 
         // Test Results
-        wpm: '',
-        wpmChange: '', 
-        cpm: '', 
-        cpmChange: '', 
-        accuracy: '', 
-        accuracyChange: '',
+        wpm: document.getElementById('wpm'),
+        wpmChange: document.getElementById('wpmChange'), 
+        cpm: document.getElementById('cpm'), 
+        cpmChange: document.getElementById('cpmChange'), 
+        accuracy: document.getElementById('accuracy'), 
+        accuracyChange: document.getElementById('accuracyChange'),
 
         // User Input
-        textInput: '', 
-        nameInput: '',
+        textInput: document.querySelector('#input'), 
+        nameInput: document.querySelector('.form-group'),
 
         // Test Words
         content: document.getElementById('content'),
         activeWord: '',
 
         // Modal
-        modal: ''
+        modal: $('#myModal')
 
     };
 
@@ -67,7 +67,9 @@ var UIModule = (function() {
         getDOMElements: function(){},
 
         // Indicators / Test Control
-        updateTimeLeft: function(){},
+        updateTimeLeft: function(x){
+            DOMElments.timeLeft.innerHTML = x;
+        },
 
         // Test Results
         updateResults: function(){},
@@ -101,8 +103,8 @@ var UIModule = (function() {
             content = content.join('');
             // This line of code wiill not work so the next line is a solution we can us to change all pipe characters into carrage returns
             // content = content.replace('<span>|</span>', '<span>&crarr;</span>');
-            content = content.split('<span>|</span>').join('<span>&crarr;</span>')
-            console.log(content)
+            content = content.split('<span>' + lineReturn + '</span>').join('<span>&crarr;</span>')
+            // console.log(content)
 
             DOMElments.content.innerHTML = content;
          
