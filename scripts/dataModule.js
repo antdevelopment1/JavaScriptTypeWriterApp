@@ -46,9 +46,7 @@ var dataModule = (function() {
             return currentWord + randomPunctuation;
         });
     };
-    var array = ['word1', 'word2', 'word3', 'word1', 'word2', 'word3', 'word1', 'word2', 'word3', 'word1', 'word2', 'word3'];
-    console.log(addRandomPunctuation(array));
-
+    
     // =================
     // Private Variables
     // =================
@@ -132,7 +130,7 @@ var dataModule = (function() {
             // ==========
 
             // Fills words.testWords
-            fillsListOfTestWords: function(textNumber, words) {
+            fillListOfTestWords: function(textNumber, words) {
                 var result = words.split(" ");
                 
                 if (textNumber == 0 ) {
@@ -147,11 +145,18 @@ var dataModule = (function() {
                 appData.words.testWords = result;
             }, 
 
-            getListOfWords: function(){}, //Get List of test words words.testWords
+            //Get List of test words words.testWords
+            getListOfTestWords: function(){
+                return appData.words.testWords;
+            }, 
 
-            moveToNewWord: function(){}, //Increments the currentWordIndex - Updated current word by creating a new instance of the word class - updates numOfCharacters, numOfCorrectWords, and numOfTestCharacters
+            moveToNewWord: function(){}, // Increments the currentWordIndex - Updated current word by creating a new instance of the word class - updates numOfCharacters, numOfCorrectWords, and numOfTestCharacters
 
             updateCurrentWord: function(value){}, // Update current word using user input
+
+            getLineReturn() {
+                return lineReturn;
+            },
 
             returnData() {
                 console.log(appData);
