@@ -99,23 +99,32 @@ var dataModule = (function() {
         return {
 
             // Indicators - Test Control
-            setTestTime: function(x){}, // Sets the toal test time to x
 
-            initializeTimeLeft: function() {}, // Initialize time left to the total test time
+            // Sets the toal test time to x
+            setTestTime: function(x){
+                appData.indicators.totalTestTime = x;
+            }, 
+
+            initializeTimeLeft: function() {
+                appData.indicators.timeLeft = appData.indicators.totalTestTime;
+            }, // Initialize time left to the total test time
 
             startTest: function() {}, // Starts the test
 
             endTest: function() {}, // Ends the test
 
+            getTimeLeft: function() {
+                return appData.indicators.timeLeft;
+            }, // Get time left: appData.timeLeft
+            
             reduceTime: function() {}, // Reduces the time by 1 second
 
             timeLeft: function() {}, // Check is the test has already ended
 
             testEnded: function() {}, // Check is the test has already ended
-
+            
             testStarted: function() {}, // Checks if the test has started
-
-            getTimeLeft: function() {}, // Get time left: appData.timeLeft
+            
 
 
             // Typing Test Results
