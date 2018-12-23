@@ -21,33 +21,41 @@ var eventsModule = (function(dModule, uModule, cModule, wModule) {
     // Public Variables
     // ================
     return {
-
-        // Init function intializes the test before start
-        init: function(duration, testNumber) {
-
+        // Init function, initializes the test before start
+        init: function(duration, textNumber){
+            
+            // Fill the list of test words: data Module
+          
+            var words = wModule.getWords(textNumber);
+            dModule.fillListOfTestWords(textNumber, words);
+            
             // Fill the list of test words: UI Module
-            var words = wModule.getWords(testNumber);
+            // var lineReturn = dModule.getLineReturn();
+            // var testWords = dModule.getListOfTestWords();
+            // uModule.fillContent(testWords);
 
-            dModule.fillsListOfTestWords(testNumber, words);
-
+            var lineReturn = dModule.getLineReturn();
+            var testWords = dModule.getListOfTestWords();
+            uModule.fillContent(testWords, lineReturn);
+            
             // Set the total test time
-
-            // Update the time left: Data Module
-
-            // Update the time left: UI Module
-
-            // Move to a new word: Data Module
-
-            // Set active word: UI Module
-
+            
+            // Update time left: data Module
+            
+            // Update time left: UI module
+            
+            // Move to a new word: data Module
+            
+            // Set active Word: UI Module
+            
             // Format the active word: UI Module
-
-            // Focus on texy input: UI Module
-
-            // Add all event listeners
-
+            
+            // Focus on text input: UI Module
+            
+            
+            // Add avent listeners
             addEventListeners();
-
         }
-    };  
+    };
+            
 }(dataModule, UIModule, certificateModule, wordsModule));
