@@ -175,7 +175,7 @@ var dataModule = (function() {
 
             // Increments the currentWordIndex - Updated current word by creating a new instance of the word class - updates numOfCharacters, numOfCorrectWords, and numOfTestCharacters
             moveToNewWord: function(){
-                
+
                 if (appData.words.currentWordIndex > -1) {
                     // Update the number of correct words
 
@@ -185,10 +185,26 @@ var dataModule = (function() {
                 }
 
                 appData.words.currentWordIndex++;
-                var currentIndex = appData.words.currentWordIndex
+                var currentIndex = appData.words.currentWordIndex;
                 var newWord = new word(currentIndex);
                 appData.words.currentWord = newWord;
-            }, 
+            },
+            
+            // Get the current word index
+            getCurrentWordIndex() {
+                return appData.words.currentWordIndex;
+            },
+
+            // Get current word
+            getCurrentWord() {
+                var currentWord = appData.words.currentWord;
+                return {
+                    value: {
+                        correct: currentWord.value.correct,
+                        user: currentWord.value.user
+                    }
+                };
+            },
 
             updateCurrentWord: function(value){}, // Update current word using user input
 
@@ -202,3 +218,5 @@ var dataModule = (function() {
 
         };
 }());
+
+
