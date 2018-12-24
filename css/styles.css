@@ -102,4 +102,9 @@ body{
         color: black;
     }
 
+    .activeWord {
+        background-color: teal;
+        border-radius: 5px;
+    }
+
     
