@@ -5,7 +5,7 @@ var UIModule = (function() {
     // =================
 
     // Classes used to select HTML elements
-    var DOMElments = {
+    var DOMElements = {
 
         // Indicators / Test Control
         timeLeft: document.getElementById('timeLeft'), // HTML element displaying time left
@@ -68,7 +68,7 @@ var UIModule = (function() {
 
         // Indicators / Test Control
         updateTimeLeft: function(x){
-            DOMElments.timeLeft.innerHTML = x;
+            DOMElements.timeLeft.innerHTML = x;
         },
 
         // Test Results
@@ -106,13 +106,23 @@ var UIModule = (function() {
             content = content.split('<span>' + lineReturn + '</span>').join('<span>&crarr;</span>')
             // console.log(content)
 
-            DOMElments.content.innerHTML = content;
+            DOMElements.content.innerHTML = content;
+            
          
         }, 
 
-        formatWord: function(wordObject, wordHTML){}, 
+        formatWord: function(wordObject){
+            var activeWord = DOMElements.activeWord;
+            
+            // Hightlight current word
+            activeWord.className = 'activeWord';
 
-        setActiveWord: function(index){},
+            // Format indiviual character
+        }, 
+
+        setActiveWord: function(index){
+            DOMElements.activeWord = DOMElements.content.children[index];
+        },
 
         deactivateCurrentWord: function(){}, 
 
