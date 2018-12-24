@@ -47,11 +47,14 @@ var eventsModule = (function(dModule, uModule, cModule, wModule) {
             dModule.moveToNewWord();
             
             // Set active Word: UI Module
+            var index = dModule.getCurrentWordIndex();
+            uModule.setActiveWord(index);
             
             // Format the active word: UI Module
+            var currentWord = dModule.getCurrentWord();
+            uModule.formatWord(currentWord);
             
             // Focus on text input: UI Module
-            
             
             // Add avent listeners
             addEventListeners();
