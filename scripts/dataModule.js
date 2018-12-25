@@ -22,7 +22,7 @@ var dataModule = (function() {
     };
 
     // Capitalize first letter of a string
-    String.prototype.capaitalize = function() {
+    String.prototype.capitalize = function() {
         var newString = '';
         var firstCharCap = this.charAt(0).toUpperCase();
         // Start to slice at the element with an index of 1 and goes all the way until end
@@ -32,11 +32,11 @@ var dataModule = (function() {
     }
 
     // Capitalize random function
-    var capaitalizeRandom = function(arrayOfStrings) {
+    var capitalizeRandom = function(arrayOfStrings) {
         return arrayOfStrings.map(function(currentWord) {
             var x = Math.floor(4 * Math.random());
 
-            return (x == 3) ? currentWord.capaitalize() : currentWord;
+            return (x == 3) ? currentWord.capitalize() : currentWord;
         })
     }
 
@@ -96,6 +96,8 @@ var dataModule = (function() {
         },
     };
 
+
+
     // Word constructor
     var word = function(index){
         this.value = {
@@ -148,29 +150,54 @@ var dataModule = (function() {
                 appData.indicators.timeLeft = appData.indicators.totalTestTime;
             }, // Initialize time left to the total test time
 
-            startTest: function() {}, // Starts the test
+            startTest: function() {
+                appData.indicators.testStarted = true;
+            }, // Starts the test
 
             endTest: function() {}, // Ends the test
 
+            // Get time left: appData.timeLeft
             getTimeLeft: function() {
                 return appData.indicators.timeLeft;
-            }, // Get time left: appData.timeLeft
+            }, 
             
-            reduceTime: function() {}, // Reduces the time by 1 second
+            // Reduces the time by 1 second
+            reduceTime: function() {
+                appData.indicators.timeLeft --;
+                return appData.indicators.timeLeft;
+            }, 
 
-            timeLeft: function() {}, // Check is the test has already ended
+            // Check is the test has already ended
+            timeLeft: function() {
+                return appData.indicators.timeLeft != 0;
+            }, 
 
             // Check is the test has already ended
             testEnded: function() {
                 return appData.indicators.testEnded;
             }, 
             
-            testStarted: function() {}, // Checks if the test has started
+            // Checks if the test has started
+            testStarted: function() {
+                return appData.indicators.testStarted;
+            }, 
             
 
 
             // Typing Test Results
-            calculateWom: function() {}, // Calculates wpm and wpmChange and updates them in appData
+            // Calculates wpm and wpmChange and updates them in appData
+            calculateWpm: function() {
+                var wpmOld = appData.results.wpm;
+                var numOfCorrectWords = appData.results.numOfCorrectWords;
+                if (appData.indicators.timeLeft != appData.indicators.totalTestTime) {
+                  appData.results.wpm = Math.round( 60 * numOfCorrectWords / (appData.indicators.totalTestTime - appData.indicators.timeLeft));
+                } else {
+                    appData.results.wpm = 0;
+                }
+                appData.results.wpmChange = appData.results.wpm - wpmOld;
+
+                return [appData.results.wpm, appData.results.wpmChange];
+            },
 
             calculateCpm: function() {}, //Calculates cpm and cpmChange and updates them in appData
 
@@ -188,7 +215,7 @@ var dataModule = (function() {
                     // Shuffle words
                     result = shuffle(result);
                     // Capiitalize random strings
-                    result = capaitalizeRandom(result);
+                    result = capitalizeRandom(result);
                     // Add random puncutation
                     result = addRandomPunctuation(result);
 
@@ -205,11 +232,17 @@ var dataModule = (function() {
             moveToNewWord: function(){
 
                 if (appData.words.currentWordIndex > -1) {
+
                     // Update the number of correct words
+                    if (appData.words.currentWord.value.isCorrect == true) {
+                        appData.results.numOfCorrectWords++;
+                    }
 
                     // Update the number of correct characters
+                    appData.results.numOfCorrectCharacters += appData.words.currentWord.characters.totalCorrect;
 
                     // Update number of test words
+                    appData.results.numOfTestCharacters += appData.words.currentWord.characters.totalTest;
                 }
 
                 appData.words.currentWordIndex++;

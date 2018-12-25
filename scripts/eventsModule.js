@@ -38,8 +38,46 @@ var eventsModule = (function(dModule, uModule, cModule, wModule) {
             }
 
             // Check if the test has not started yet and if it has we will start the test and countdown
-            if (dModule.testStarted()) {
-                // Start the test
+            if (!dModule.testStarted()) {
+                // Start the test Data Module
+                dModule.startTest();
+
+                // Start counter
+                var b = setInterval(function() {
+                    // Calculate the results in Data Module
+
+                    var results = {};
+                    // Update the wpm, wpmChange
+                    [results.wpm, results.wpmChange] = dModule.calculateWpm();
+
+                    // Update the cpm, cpmChange
+
+                    // Update accuracy, accuracyChange
+                    dModule.returnData();
+
+                    // Update the results in UI Module
+
+                    // Update Time left
+                        // Chenck if we have any time left
+                            // If so:
+                            // Reduce the time by one second Data Module
+                            // Update the time remaining in UI Module
+
+                            // If not:
+                            // End the test in Data Module
+
+                            // Fill the modal
+
+                            // Display/show the moal
+                            if (dModule.timeLeft()) {
+                                // Reudce time by one second
+                               var timeLeft = dModule.reduceTime();
+                                // Update time remainging in UI 
+                                uModule.updateTimeLeft(timeLeft);
+                            }
+
+                    
+                }, 1000);
             }
             // Get the typed word in UI Module
             var typedWord = uModule.getTypedWord();
@@ -128,4 +166,6 @@ var eventsModule = (function(dModule, uModule, cModule, wModule) {
     };
             
 }(dataModule, UIModule, certificateModule, wordsModule));
+
+
 
