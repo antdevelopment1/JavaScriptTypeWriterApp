@@ -107,4 +107,12 @@ body{
         border-radius: 5px;
     }
 
+    .correctCharacter {
+        color: mediumblue;
+    }
+
+    .wrongCharacter {
+        color: red;
+    }
+
     
