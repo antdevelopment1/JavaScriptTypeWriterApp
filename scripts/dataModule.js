@@ -1,4 +1,3 @@
-
 // IIFE dataModule
 var dataModule = (function() {
     // =================
@@ -223,7 +222,7 @@ var dataModule = (function() {
                     if(numberOfTestCharacters != 0) {
                         appData.results.accuracy = Math.round( 100 * numOfCorrectCharacters / numberOfTestCharacters);
                     } else {
-                        appData.results.accuracy
+                        appData.results.accuracy = 0;
                     }
                 } else {
                     appData.results.accuracy = 0;
@@ -312,5 +311,4 @@ var dataModule = (function() {
 
         };
 }());
-
 

@@ -61,6 +61,24 @@ var UIModule = (function() {
         return (index < userValue.length)? (currentCharacter == userValue[index] ? 'correctCharacter': 'wrongCharacter') : '0';
     };
 
+    var updateChange = function (value, changeElement) {
+
+        // Determine the class to add to the change element and html content to insert
+        var classToAdd, html;
+        [classToAdd, html] = (value >= 0) ? ['scoreUp', '+' + value] : ['scoreDown', value];
+
+        // Add percentage to the percentage changed
+        
+
+        // Update the changed element
+        changeElement.innerHTML = html;
+        
+        // Style the changed element
+        changeElement.removeAttribute('class');
+        changeElement.className = classToAdd;
+
+    }
+
     // ================
     // Public Variables
     // ================
@@ -79,7 +97,21 @@ var UIModule = (function() {
         },
 
         // Test Results
-        updateResults: function(){},
+        updateResults: function(results){
+            // Update the wpm
+            DOMElements.wpm.innerHTML = results.wpm;
+
+            // Update clicks per minute
+            DOMElements.cpm.innerHTML = results.cpm;
+
+            // Update accuracy
+            DOMElements.accuracy.innerHTML = results.accuracy + '%';
+
+            // Update changes
+            updateChange(results.wpmChange, DOMElements.wpmChange);
+            updateChange(results.cpmChange, DOMElements.cpmChange);
+            updateChange(results.accuracyChange, DOMElements.accuracyChange);
+        },
 
         fillModal: function(){}, 
 
@@ -178,4 +210,7 @@ var UIModule = (function() {
     };
 
 }());
+
+
+
 
