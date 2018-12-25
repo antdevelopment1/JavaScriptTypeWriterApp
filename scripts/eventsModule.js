@@ -9,6 +9,27 @@ var eventsModule = (function(dModule, uModule, cModule, wModule) {
     // =================
     var addEventListeners = function() {
 
+        // Enter click event
+        uModule.getDOMElements().textInput.addEventListener('keydown', function(event) {
+            console.log(event)
+            // Check if test ended and if it has do nothing
+            if (dModule.testEnded()) {
+                return;
+            }
+
+            // Check if the user pressed enter
+            var key = event.keyCode;
+            if(key == 13) {
+                uModule.getDOMElements().textInput.value += dModule.getLineReturn() + ' ';
+
+                // Create a new input event
+                var inputEvent = new Event('input');
+
+                // Dispach it
+                uModule.getDOMElements().textInput.dispatchEvent(inputEvent);
+            }
+        })
+
         // Character typing event listener
         uModule.getDOMElements().textInput.addEventListener('input', function(event) {
             // Check if test ended and if it has do nothing
@@ -31,7 +52,7 @@ var eventsModule = (function(dModule, uModule, cModule, wModule) {
             uModule.formatWord(currentWord);
 
             // Check if the user pressed space or enter
-            if (uModule.spacePressed(event) || uModule.enterPressed()) {
+            if (uModule.spacePressed(event) || uModule.enterPressed(dModule.getLineReturn())) {
                 // Empty text input
                 uModule.emptyInput();
 
@@ -59,6 +80,8 @@ var eventsModule = (function(dModule, uModule, cModule, wModule) {
         // Click on restart button event listener
 
     };
+    // Scroll active word into middle view on window resize
+    window.addEventListener('resize', uModule.scroll);
  
     // ================
     // Public Variables
