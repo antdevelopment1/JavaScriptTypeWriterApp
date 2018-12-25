@@ -213,7 +213,25 @@ var dataModule = (function() {
                 return [appData.results.cpm, appData.results.cpmChange];
             }, 
 
-            calculateAccuracy: function() {}, //Calculates accuracy and accuracyChange and updates them in appData
+            //Calculates accuracy and accuracyChange and updates them in appData
+            calculateAccuracy: function() {
+                var accuracyOld = appData.results.accuracy;
+                var numOfCorrectCharacters = appData.results.numOfCorrectCharacters;
+                var numberOfTestCharacters = appData.results.numOfTestCharacters;
+
+                if (appData.indicators.timeLeft != appData.indicators.totalTestTime) {
+                    if(numberOfTestCharacters != 0) {
+                        appData.results.accuracy = Math.round( 100 * numOfCorrectCharacters / numberOfTestCharacters);
+                    } else {
+                        appData.results.accuracy
+                    }
+                } else {
+                    appData.results.accuracy = 0;
+                }
+                appData.results.accuracyChange = appData.results.accuracy - accuracyOld;
+
+                return [appData.results.accuracy, appData.results.accuracyChange];
+            }, 
 
             // ==========
             // Test Words
@@ -294,4 +312,5 @@ var dataModule = (function() {
 
         };
 }());
+
 
