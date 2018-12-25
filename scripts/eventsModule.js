@@ -72,15 +72,27 @@ var eventsModule = (function(dModule, uModule, cModule, wModule) {
 
                             // If not:
                             // End the test in Data Module
-
-                            // Fill the modal
-
-                            // Display/show the moal
+                         
                             if (dModule.timeLeft()) {
                                 // Reudce time by one second
                                var timeLeft = dModule.reduceTime();
                                 // Update time remainging in UI 
                                 uModule.updateTimeLeft(timeLeft);
+                            } else {
+                                // End the test Data Module
+                                clearInterval(b);
+                                dModule.endTest();
+
+                                dModule.returnData();
+
+                                // Fill the modal
+                                uModule.fillModal(results.wpm);
+
+                                // Display/show the modal
+                                uModule.showModal();
+
+
+
                             }
 
                     
