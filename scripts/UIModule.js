@@ -56,7 +56,10 @@ var UIModule = (function() {
         return array.join('');
     };
 
-    
+    var userValue;
+    var returnCharClass = function(currentCharacter, index){
+        return (index < userValue.length)? (currentCharacter == userValue[index] ? 'correctCharacter': 'wrongCharacter') : '0';
+    };
 
     // ================
     // Public Variables
@@ -64,7 +67,11 @@ var UIModule = (function() {
     return {
 
         // Get DOM Elements
-        getDOMElements: function(){},
+        getDOMElements: function(){
+            return {
+                textInput: DOMElements.textInput  
+            };
+        },
 
         // Indicators / Test Control
         updateTimeLeft: function(x){
@@ -79,7 +86,9 @@ var UIModule = (function() {
         showMadal: function(){},
 
         // User Input
-        inputFocus: function(){}, 
+        inputFocus: function(){
+            DOMElements.textInput.focus();
+        }, 
 
         isNameEmpty: function(){}, 
 
@@ -91,7 +100,10 @@ var UIModule = (function() {
 
         emptyInput: function(){},
 
-        getTypedWord: function(){},
+        getTypedWord: function(){
+            console.log(DOMElements.textInput.value)
+            return DOMElements.textInput.value;
+        },
 
         // Test Words
         fillContent: function(array, lineReturn){
@@ -114,15 +126,35 @@ var UIModule = (function() {
         formatWord: function(wordObject){
             var activeWord = DOMElements.activeWord;
             
-            // Hightlight current word
+            // Highlight current word
             activeWord.className = 'activeWord';
-
-            // Format indiviual character
+            
+            // Format individual characters
+            var correctValue = wordObject.value.correct;
+            userValue = wordObject.value.user;
+            
+            // Correct value 'word1 '
+            // User value 'wwrd'
+            var classes = Array.prototype.map.call(correctValue, returnCharClass);
+            
+            // Get active word
+            var activeWord = DOMElements.activeWord;
+            
+            // HTML collection
+            var characters = activeWord.children;
+            
+            // Add classes to children
+            for(var i = 0; i < characters.length; i ++){
+                characters[i].removeAttribute('class');
+                characters[i].className = classes[i];
+            }
+              
         }, 
-
+        
         setActiveWord: function(index){
             DOMElements.activeWord = DOMElements.content.children[index];
-        },
+        }, 
+        
 
         deactivateCurrentWord: function(){}, 
 
@@ -131,3 +163,4 @@ var UIModule = (function() {
     };
 
 }());
+

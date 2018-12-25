@@ -1,5 +1,9 @@
+
 // IIFE dataModule
 var dataModule = (function() {
+    // =================
+    // Private Variables
+    // =================
     var lineReturn = '|';
     // Shuffle function
     var shuffle = function (array) {
@@ -47,9 +51,11 @@ var dataModule = (function() {
         });
     };
     
-    // =================
-    // Private Variables
-    // =================
+    // Character call back used to calculate the number of correct chacracters inside the current word
+    var nbCorrectChar;
+    var charCallback = function(currentElement, index) {
+        nbCorrectChar += (currentElement == this.characters.user[index]) ? 1 : 0;
+    };
 
     // Indicators / Test Control / Test Tesults
     var appData = {
@@ -105,7 +111,26 @@ var dataModule = (function() {
         };
     }; 
 
-    word.prototype.update =  function(value){}; // Update method  
+    // Update method   updates the word using the word typed by the user
+    word.prototype.update =  function(value){
+        // Update the user value
+        this.value.user = value;
+
+        // Update the words status (correct or not)
+        this.value.isCorrect = (this.value.correct == this.value.user);
+
+        // Update the user characters //
+        this.characters.user = this.value.user.split('');
+
+        // Calculate the number of correct characters 
+        nbCorrectChar = 0;
+
+        
+       var charCallback2 = charCallback.bind(this);
+        this.characters.correct.forEach(charCallback2);
+
+        this.characters.totalCorrect = nbCorrectChar;
+    }; 
 
         // ================
         // Public Variables
@@ -135,7 +160,10 @@ var dataModule = (function() {
 
             timeLeft: function() {}, // Check is the test has already ended
 
-            testEnded: function() {}, // Check is the test has already ended
+            // Check is the test has already ended
+            testEnded: function() {
+                return appData.indicators.testEnded;
+            }, 
             
             testStarted: function() {}, // Checks if the test has started
             
@@ -206,7 +234,10 @@ var dataModule = (function() {
                 };
             },
 
-            updateCurrentWord: function(value){}, // Update current word using user input
+            // Update current word using user input
+            updateCurrentWord: function(value){
+                appData.words.currentWord.update(value);
+            }, 
 
             getLineReturn() {
                 return lineReturn;
@@ -218,5 +249,4 @@ var dataModule = (function() {
 
         };
 }());
-
 

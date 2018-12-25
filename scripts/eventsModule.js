@@ -10,6 +10,41 @@ var eventsModule = (function(dModule, uModule, cModule, wModule) {
     var addEventListeners = function() {
 
         // Character typing event listener
+        uModule.getDOMElements().textInput.addEventListener('input', function(event) {
+            // Check if test ended and if it has do nothing
+            if (dModule.testEnded()) {
+                return;
+            }
+
+            // Check if the test has not started yet and if it has we will start the test and countdown
+            if (dModule.testStarted()) {
+                // Start the test
+            }
+            // Get the typed word in UI Module
+            var typedWord = uModule.getTypedWord();
+
+            // Update the current word in Data Module
+            dModule.updateCurrentWord(typedWord);
+
+            // Format the active word
+            var currentWord = dModule.getCurrentWord();
+            uModule.formatWord(currentWord);
+
+            // Check if the user pressed space or enter
+            if (uModule.spacePressed() || uModule.enterPressed()) {
+                // Empty text input
+
+                // Deactivate the current word
+
+                // Move to a new Word in Data Module
+
+                // Set active word in UI Module
+
+                // Format the active word in Ui Module
+
+                // Sroll word into the middle view
+            }
+        })
 
         // Click on download button event listener
 
@@ -62,3 +97,4 @@ var eventsModule = (function(dModule, uModule, cModule, wModule) {
     };
             
 }(dataModule, UIModule, certificateModule, wordsModule));
+
