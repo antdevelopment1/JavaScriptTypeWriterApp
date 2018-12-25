@@ -31,18 +31,26 @@ var eventsModule = (function(dModule, uModule, cModule, wModule) {
             uModule.formatWord(currentWord);
 
             // Check if the user pressed space or enter
-            if (uModule.spacePressed() || uModule.enterPressed()) {
+            if (uModule.spacePressed(event) || uModule.enterPressed()) {
                 // Empty text input
+                uModule.emptyInput();
 
                 // Deactivate the current word
+                uModule.deactivateCurrentWord();
 
                 // Move to a new Word in Data Module
-
-                // Set active word in UI Module
-
-                // Format the active word in Ui Module
+                dModule.moveToNewWord();
+            
+                // Set active Word: UI Module
+                var index = dModule.getCurrentWordIndex();
+                uModule.setActiveWord(index);
+                
+                // Format the active word: UI Module
+                var currentWord = dModule.getCurrentWord();
+                uModule.formatWord(currentWord);
 
                 // Sroll word into the middle view
+                uModule.scroll();
             }
         })
 
