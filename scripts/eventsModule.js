@@ -51,6 +51,8 @@ var eventsModule = (function(dModule, uModule, cModule, wModule) {
                     [results.wpm, results.wpmChange] = dModule.calculateWpm();
 
                     // Update the cpm, cpmChange
+                    [results.cpm, results.cpmChange] = dModule.calculateCpm();
+
 
                     // Update accuracy, accuracyChange
                     dModule.returnData();
