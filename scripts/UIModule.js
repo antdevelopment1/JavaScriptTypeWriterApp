@@ -79,7 +79,18 @@ var UIModule = (function() {
         changeElement.removeAttribute('class');
         changeElement.className = classToAdd;
 
-    }
+        // Fade Element
+        fadeElement(changeElement);
+    };
+
+    var fadeElement = function (element) {
+        element.style.opacity = 1;
+        setTimeout(function() {
+            element.style.opacity = .8;
+        }, 100)
+    };
+
+
 
     // ================
     // Public Variables
