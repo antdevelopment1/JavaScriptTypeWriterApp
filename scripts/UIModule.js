@@ -68,7 +68,9 @@ var UIModule = (function() {
         [classToAdd, html] = (value >= 0) ? ['scoreUp', '+' + value] : ['scoreDown', value];
 
         // Add percentage to the percentage changed
-        
+        if (changeElement == DOMElements.accuracyChange) {
+            html += '%';
+        }
 
         // Update the changed element
         changeElement.innerHTML = html;
