@@ -43,7 +43,7 @@ var dataModule = (function() {
     var addRandomPunctuation = function(arrayOfStrings) {
         return arrayOfStrings.map(function (currentWord) {
             var randomPunctuation;
-            var items = [lineReturn, '?', ',' , ',' , ',' , ',' , ',', '.', '.', '.', '!', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',];
+            var items = [lineReturn, '?', ',', ',', ',', ',', '.', '.', '!', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''];
             var randomIndex = Math.floor(Math.random() * items.length);
             randomPunctuation = items[randomIndex];
             return currentWord + randomPunctuation;
@@ -80,17 +80,17 @@ var dataModule = (function() {
             currentWordIndex: -1, 
             testWords: [], 
             currentWord: {
-                // value: {
-                //     correct: '', 
-                //     user: '',
-                //     isCorrect: false
-                // },
-                // characters: {
-                //     correct: [],
-                //     user: [],
-                //     totalCorrect: 0,
-                //     totalTest: 0
-                // }
+                value: {
+                    correct: '', 
+                    user: '',
+                    isCorrect: false
+                },
+                characters: {
+                    correct: [],
+                    user: [],
+                    totalCorrect: 0,
+                    totalTest: 0
+                }
             } 
         },
     };
@@ -145,15 +145,20 @@ var dataModule = (function() {
                 appData.indicators.totalTestTime = x;
             }, 
 
+            // Initialize time left to the total test time
             initializeTimeLeft: function() {
                 appData.indicators.timeLeft = appData.indicators.totalTestTime;
-            }, // Initialize time left to the total test time
+            }, 
 
+            // Starts the test
             startTest: function() {
                 appData.indicators.testStarted = true;
-            }, // Starts the test
-
-            endTest: function() {}, // Ends the test
+            }, 
+            
+            // Ends the test
+            endTest: function() {
+                appData.indicators.testEnded = true;
+            }, 
 
             // Get time left: appData.timeLeft
             getTimeLeft: function() {
