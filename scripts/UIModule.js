@@ -88,7 +88,7 @@ var UIModule = (function() {
     var fadeElement = function (element) {
         element.style.opacity = 1;
         setTimeout(function() {
-            element.style.opacity = .8;
+            element.style.opacity = .7;
         }, 100)
     };
 
@@ -161,7 +161,7 @@ var UIModule = (function() {
             DOMElements.nameInput.insertAdjacentHTML('beforebegin', html);
 
             // Store level in download button
-            DOMElements.download.setAttribute('level', results.level);
+            // DOMElements.download.setAttribute('level', results.level);
         }, 
 
         showModal: function(){
