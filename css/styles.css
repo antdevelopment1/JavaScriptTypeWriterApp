@@ -14,8 +14,8 @@ body{
         color: rgba(255, 255, 255, .9);
         /* background-color: rgba(0, 0, 0, .9); */
         /* padding: 50px; */
-        background: #4389A2;  /* fallback for old browsers */
-        /* background-image:linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url(./../images/ocean.jpg); */
+        /* background: #4389A2; */
+        background-image:linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1)), url(./../images/underwater-802092_1280.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         
@@ -90,7 +90,7 @@ body{
         margin: 30px auto;
         line-height: 40px;
         border-radius: 5px;
-        /* box-shadow: 3px 3px 3px black; */
+        box-shadow: 3px 3px 3px black;
         /* outline: 1px solid red; */
     }
     
@@ -114,6 +114,7 @@ body{
     .text {
         /* outline: 1px solid purple; */
         border: none;
+        box-shadow: 3px 3px 3px black;
     }
     .text:focus {
         outline: none;
