@@ -1,62 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 /* body element */
 body{
        font-family: 'Quattrocento Sans', sans-serif;
         /* background: url("./../images/aurora.jpg") no-repeat center center; */
         /* background-attachment: fixed; */
         /* background-size: cover;  */
-        color: rgba(255, 255, 255, .8);
-        background-color: rgba(0, 0, 0, .9);
+        color: rgba(255, 255, 255, .9);
+        /* background-color: rgba(0, 0, 0, .9); */
         /* padding: 50px; */
+        background: #4389A2;  /* fallback for old browsers */
+        /* background-image:linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url(./../images/ocean.jpg); */
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+    
     }
+
+    .text-center {
+        /* outline: 2px solid blue; */
+        /* display: flex; */
+    }
+
+    header {
+        /* outline: 2px solid green; */
+        width: 100%;
+        text-align: center;
+    }
+
     header h1 {
         margin-top: 30px;
+        text-shadow: 2px 2px 2px black;
         /* outline: 1px solid red; */
     }
 
-   
+    .content-container {
+        /* outline: 1px solid purple; */
+        height: 100%;
+        width: 100%;
+    }
+
+    .counters{
+        font-size: 30px;
+        /* outline: 3px solid green; */
+        width: 60%;
+        margin: 0 auto;
+        display: flex;
+        /* flex-direction: column; */
+        justify-items: center;
+    }
+
     .meas_container{
-        margin-top: 30px;
-        background-color:teal;
+        margin: 30px auto 0 auto;        
+        background-color:rgba(255, 255, 255, .3);
         border: 3px solid rgba(255, 255, 255, .5);
         /* outline: 1px solid red; */
-    }
-    
-    .row{
-        font-size: 30px;
+        height: 150px;
+        width: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        box-shadow: 3px 3px 3px black;
+        border-radius: 50%;
     }
     
     .title{
         font-size: 14px;
+        /* outline: 1px solid blue; */
     }
     
     .typingIcon{
         height: 50px;
+        /* outline: 2px solid blue; */
     }
     
     #content{
         height: 200px;
         background-color: rgba(255,255,255,0.2);
-        margin: 10px auto;
+        /* margin: 10px auto; */
         font-size: 30px;
+        width: 80%;
         overflow: hidden;
-        margin: 30px 5px 30px 5px;
+        margin: 30px auto;
         line-height: 40px;
+        border-radius: 5px;
+        /* box-shadow: 3px 3px 3px black; */
         /* outline: 1px solid red; */
     }
     
     .change{
         height: 25px;
-        font-size: 16px;
+        font-size: 18px;
+    }
+
+    .text-input {
+        /* outline: 2px solid red; */
+        display: flex;
+        justify-content: center;
+        border: none;
+        color: rgba(255, 255, 255, .9);
+    }
+
+    .text::placeholder {
+        color: rgba(255, 255, 255, .7);
+    }
+
+    .text {
+        /* outline: 1px solid purple; */
+        border: none;
+    }
+    .text:focus {
+        outline: none;
     }
     
     #input{
-        background-color: teal;
+        background-color:rgba(0, 0, 0, .1);
         width: 35%;
         font-size: 40px;
         /* padding: 10px; */
-        color: rgb(1, 226, 182);
-        
+        color: #fff;
     }
+
     
     .keyboard{
         min-height: 200px;
@@ -68,19 +138,26 @@ body{
     
     .restart{
         margin-top: 20px;
+        margin-bottom: 20px;
         opacity: 0.8;
-        /* outline: 1px solid red; */
+        /* outline: 2px solid red; */
+        display: flex;
+        justify-content: center;
     }
     
     .btn-primary{
-        background: teal;
+        background:rgba(0, 0, 0, .1);
         /* outline: 1px solid red; */
         border: 2px solid rgba(255, 255, 255, .4);
         color: white;
+        height: 55px;
+        width: 200px;
+        box-shadow: 3px 3px 3px black;
+        font-size: 26px;
     }
     
     .btn-primary:focus,.btn-primary:active,.btn-primary:hover{
-        background: teal;
+        background: rgba(0, 0, 0, .1);
     }
     
     .scoreDown, .scoreUp{
@@ -94,7 +171,7 @@ body{
     }
     
     .scoreUp{
-        background: teal;
+        background: rgba(0, 255, 0, 0.493);
         color: black
     }
     
@@ -103,16 +180,17 @@ body{
     }
 
     .activeWord {
-        background-color: teal;
-        border-radius: 5px;
+        /* text-decoration: underline; */
+        background-color: rgba(0, 0, 0, .3);
+        border-radius: 2px;
     }
 
     .correctCharacter {
-        color: mediumblue;
+        color: lime;
     }
 
     .wrongCharacter {
-        color: red;
+        color: rgb(235, 36, 36);
     }
 
     .result {
