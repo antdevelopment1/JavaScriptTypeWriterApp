@@ -14,10 +14,10 @@
         <div class="container-fluid">
             <div class="text-center">
                 <header>
-                    <h1>Typing Test</h1>
+                    <h1>Speed Typing Test</h1>
                 </header>
-                <div class="row">
-                    <div class="col-3 measurement">
+                <div class="counters">
+                    <div class="col-3 measurement counter-container">
                         <div class="meas_container">
                             <div class="typingIcon">
                                 <img src="images/speed2.png" width="60">
@@ -31,7 +31,7 @@
                             <span id="wpmChange"></span>
                         </div>
                     </div>
-                    <div class="col-3 measurement">
+                    <div class="col-3 measurement counter-container">
                         <div class="meas_container">
                             <div class="typingIcon">
                                 <img src="images/cpm.png" width="30">
@@ -45,7 +45,7 @@
                             <span id="cpmChange"></span>
                         </div>
                     </div>
-                    <div class="col-3 measurement">
+                    <div class="col-3 measurement counter-container">
                         <div class="meas_container">
                             <div class="typingIcon">
                                 <img src="images/accuracy.png" width="50">
@@ -59,7 +59,7 @@
                             <span id="accuracyChange"></span>
                         </div>
                     </div>
-                    <div class="col-3 measurement">
+                    <div class="col-3 measurement counter-container">
                         <div class="meas_container">
                             <div class="typingIcon">
                                 <img src="images/stopwatch.png" width="45">
@@ -71,17 +71,16 @@
                         </div>
                     </div>
                 </div>
-                
 <!--                test words-->
-                <div id="content" class="text-center"></div>
+                <div id="content" class="text-center test-words"></div>
                 
 <!--                text input-->
-                <div>
-                    <input type="text" placeholder="type here" class="text-center" id="input">
+                <div class="text-input">
+                    <input type="text" placeholder="type here" class="text-center text" id="input">
                 </div>
                 
 <!--                keyboard-->
-                <div class="keyboard"></div>
+                <!-- <div class="keyboard"></div> -->
                 
 <!--                restart-->
                 <div class="restart">
@@ -94,26 +93,25 @@
                     <div class="modal-content">
                       <div class="modal-header">
                         <h5 class="modal-title">You finished your test!</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
-                        </button>
+                        </button> -->
                       </div>
                       <div class="modal-body">
                           <div class="form-group">
-                              <label for="name" class="sr-only">Enter your name: </label>
-                              <input type="text" class="form-control" id="name" placeholder="Your full name">
+                              <!-- <label for="name" class="sr-only">Enter your name: </label>
+                              <input type="text" class="form-control" id="name" placeholder="Your full name"> -->
                           
                           </div>
                       </div>
                       <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-info" id="download">Download your certificate</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" >Close</button>
+                        <!-- <button type="button" class="btn btn-info" id="download">Download your certificate</button> -->
                     
                       </div>
                     </div>
                   </div>
                 </div>
-                
             </div>
         </div>
 
