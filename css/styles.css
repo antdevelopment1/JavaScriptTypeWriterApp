@@ -15,7 +15,7 @@ body{
         /* background-color: rgba(0, 0, 0, .9); */
         /* padding: 50px; */
         /* background: #4389A2; */
-        height: 100vh;
+        height: 100%;
         width: 100%;
         background-image:linear-gradient(rgba(0,0,0,.05), rgba(0,0,0,.05)), url(./../images/underwater-802092_1280.jpg);
         background-size: cover;
@@ -50,17 +50,19 @@ body{
     .counters{
         font-size: 30px;
         /* outline: 3px solid green; */
-        width: 60%;
+        width: 90%;
+        /* padding: 0 25px 0 0; */
         margin: 0 auto;
         display: flex;
         /* flex-direction: column; */
-        justify-items: center;
+        justify-content: center;
+        /* align-items: center; */
     }
 
     .meas_container{
-        margin: 30px auto 0 auto;        
+        margin-top: 30px;       
         background-color:rgba(255, 255, 255, .3);
-        border: 3px solid rgba(255, 255, 255, .5);
+        border: 2px solid rgba(255, 255, 255, .5);
         /* outline: 1px solid red; */
         height: 150px;
         width: 150px;
@@ -80,6 +82,24 @@ body{
     .typingIcon{
         height: 50px;
         /* outline: 2px solid blue; */
+    }
+
+    .typingIcon .speed {
+        width:60px;
+    }
+
+    .typingIcon .cpm {
+        width:30px;
+    }
+
+    .typingIcon .accuracy {
+        width: 50px;
+        height: 100%;
+    }
+
+    .typingIcon .stopwatch {
+        width: 45px;
+        height: 100%;
     }
     
     #content{
@@ -141,7 +161,7 @@ body{
     
     .restart{
         margin-top: 20px;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
         opacity: 0.8;
         /* outline: 2px solid red; */
         display: flex;
@@ -161,6 +181,7 @@ body{
     
     .btn-primary:focus,.btn-primary:active,.btn-primary:hover{
         background: rgba(0, 0, 0, .1);
+        border: 2px solid rgba(255, 255, 255, .5);
     }
     
     .scoreDown, .scoreUp{
@@ -200,3 +221,131 @@ body{
         font-size: 20px;
     }
     
+
+    /* MEDIA QUERIES */
+
+    @media screen and (max-width: 1300px) {
+        header {
+            margin-top: 0px;
+        }
+    }
+
+    @media screen and (max-width: 1100px) {    
+        
+        .counters{
+            font-size: 30px;
+            /* outline: 3px solid green; */
+            width: 80%;
+        }
+
+        .meas_container{
+            height: 140px;
+            width: 140px;
+        }
+    
+        .typingIcon .speed {
+            width:45px;
+            height: 50%;
+        }
+    
+        .typingIcon .cpm {
+            width:25px;
+            height: 65%;
+        }
+    
+        .typingIcon .accuracy {
+            width: 25px;
+            height: 60%;
+        }
+    
+        .typingIcon .stopwatch {
+            width: 30px;
+            height: 70%;
+        }
+        .title{
+            font-size: 12px;
+            /* outline: 1px solid blue; */
+        }
+
+        #input{
+            width: 55%;
+        }        
+
+        .text::placeholder {
+            font-size: 18px;
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+
+        .counters{
+            font-size: 30px;
+            width: 80%;
+        }
+
+        .meas_container{
+            height: 130px;
+            width: 130px;
+        }
+
+        .text::placeholder {
+            font-size: 20px;
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+
+        .counters {
+            width: 100%;
+        }
+
+        .meas_container {
+            height: 130px;
+            width: 130px;
+        }
+
+        #content {
+            font-size: 22px;
+        }
+
+        #input{
+            width: 65%;
+        }        
+
+        .text::placeholder {
+            font-size: 18px;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .counters {
+            width: 100%;
+            justify-content: center;
+            margin: auto;
+        }
+
+        .meas_container {
+            height: 115px;
+            width: 115px;
+            border-radius: 5%;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .meas_container {
+            height: 105px;
+            width: 100px;
+        }
+        .title {
+            font-size: 10px;
+        }
+    }
+
+    @media screen and (max-width: 450px) {
+        .meas_container {
+            height: 105px;
+            width: 90px;
+        }
+    }
+
+ 
