@@ -15,11 +15,12 @@ body{
         /* background-color: rgba(0, 0, 0, .9); */
         /* padding: 50px; */
         /* background: #4389A2; */
-        background-image:linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1)), url(./../images/underwater-802092_1280.jpg);
+        height: 100vh;
+        width: 100%;
+        background-image:linear-gradient(rgba(0,0,0,.05), rgba(0,0,0,.05)), url(./../images/underwater-802092_1280.jpg);
         background-size: cover;
         background-repeat: no-repeat;
-        
-    
+       
     }
 
     .text-center {
@@ -31,6 +32,7 @@ body{
         /* outline: 2px solid green; */
         width: 100%;
         text-align: center;
+        margin-top: 100px;
     }
 
     header h1 {
@@ -40,7 +42,7 @@ body{
     }
 
     .content-container {
-        /* outline: 1px solid purple; */
+        /* outline: 13px solid purple; */
         height: 100%;
         width: 100%;
     }
