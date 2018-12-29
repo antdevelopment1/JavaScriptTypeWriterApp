@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: none;
 }
 
 
@@ -61,8 +62,8 @@ body{
         background-color:rgba(255, 255, 255, .3);
         border: 2px solid rgba(255, 255, 255, .5);
         /* outline: 1px solid red; */
-        height: 150px;
-        width: 150px;
+        height: 200px;
+        width: 200px;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -72,7 +73,7 @@ body{
     }
     
     .title{
-        font-size: 14px;
+        font-size: 18px;
         /* outline: 1px solid blue; */
     }
     
@@ -100,13 +101,13 @@ body{
     }
     
     .test-words {
-        height: 200px;
+        height: 360px;
         background-color: rgba(255,255,255,0.2);
         /* margin: 10px auto; */
         font-size: 30px;
         width: 80%;
         overflow: hidden;
-        margin: 30px auto;
+        margin: 70px auto;
         line-height: 40px;
         border-radius: 5px;
         box-shadow: 3px 3px 3px black;
@@ -129,6 +130,7 @@ body{
 
     .text {
         /* outline: 1px solid purple; */
+        padding: 15px 20px;
         text-align: center;
         border: none;
         box-shadow: 3px 3px 3px black;
@@ -151,16 +153,8 @@ body{
     }
 
     
-    .keyboard{
-        min-height: 200px;
-        max-height: 300px;
-        background: url("./../images/keyboard.jpeg") no-repeat center center;
-        background-size: contain;
-        margin-top: 25px;
-    }
-    
     .restart{
-        margin-top: 20px;
+        margin-top: 80px;
         margin-bottom: 40px;
         opacity: 0.8;
         /* outline: 2px solid red; */
@@ -173,10 +167,10 @@ body{
         /* outline: 1px solid red; */
         border: 2px solid rgba(255, 255, 255, .4);
         color: white;
-        height: 55px;
-        width: 200px;
+        height: 65px;
+        width: 15%;
         box-shadow: 3px 3px 3px black;
-        font-size: 26px;
+        font-size: 30px;
         border-radius: 5px;
     }
     
@@ -234,6 +228,62 @@ body{
     .result {
         font-size: 20px;
     }
+
+    .footer-container {
+        display: flex;
+        /* flex-direction: row; */
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        margin-top: 100px;
+        /* padding-top: 10px; */
+        /* border-top: 3px solid rgba(0, 0, 0, .5); */
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, .7);
+        /* background-color:linear-gradient(rgba(0,0,0,.9), rgba(0,0,0,.9));  */
+        /* background-color: black; */
+        /* background-size: cover; */
+        /* background-repeat: no-repeat; */
+        font-family: 'Open Sans Condensed', sans-serif;
+    }
+    
+    footer {
+        /* display: flex; */
+        /* height: 80px; */
+        /* outline: 1px solid red; */
+        /* margin: auto 0; */
+    }
+
+    footer p {
+        /* align-self: center; */
+        font-size: 20px;
+        letter-spacing: 4px;
+        color: rgba(255, 255, 255, .6);
+        /* padding: 0; */
+    }
+    
+    .fish1 {
+        font-size: 25px;
+        color: rgba(38, 86, 163, 0.8);
+    }
+
+    .fish2 {
+        font-size: 25px;
+        color: rgba(87, 141, 36, 0.8);
+    }
+
+    .fish3 {
+        font-size: 25px;
+        color: rgba(196, 96, 30, 0.8);
+    }
+
+    .fish1,
+    .fish2,
+    .fish3 {
+        text-shadow: 3px 3px 3px rgba(0, 0, 0, .9);
+    }
+    
+
 
   
 
