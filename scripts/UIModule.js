@@ -129,28 +129,28 @@ var UIModule = (function() {
         },
 
         fillModal: function(wpm){
-            // var results;
-            // if (wpm < 40) {
-            //     results = {
-            //         type: 'turtle',
-            //         image: 'turtle.jpeg',
-            //         level: 'beginner'
-            //     }
-            // } else if (wpm < 70) {
-            //     results = {
-            //         type: 'horse',
-            //         image: 'horse.jpeg',
-            //         level: 'average'
-            //     }
-            // }  else {
-            //     results = {
-            //         type: 'puma',
-            //         image: 'puma.jpeg',
-            //         level: 'expert'
-            //     }
-            // }
+            var results;
+            if (wpm < 40) {
+                results = {
+                    type: 'turtle',
+                    image: 'turtle.jpeg',
+                    level: 'beginner'
+                }
+            } else if (wpm < 70) {
+                results = {
+                    type: 'horse',
+                    image: 'horse.jpeg',
+                    level: 'average'
+                }
+            }  else {
+                results = {
+                    type: 'puma',
+                    image: 'puma.jpeg',
+                    level: 'expert'
+                }
+            }
 
-
+            var html;
             // var html = '<div class="result"><p>You are a %type%!</p><p>You type at a speed of %wpm% words per minute</p><img class="rounded-circle" width="250" height="250" src="images/%image%" alt="%alt%"></img></div>';
             // html = html.replace('%type%', results.type);
             // html = html.replace('%wpm%', wpm);
@@ -158,7 +158,7 @@ var UIModule = (function() {
             // html = html.replace('%alt%', results.type);
 
             // Insert html into form-group
-            // DOMElements.nameInput.insertAdjacentHTML('beforebegin', html);
+            DOMElements.nameInput.insertAdjacentHTML('beforebegin', html);
 
             // Store level in download button
             // DOMElements.download.setAttribute('level', results.level);
