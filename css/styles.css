@@ -35,16 +35,22 @@ body{
         margin-top: 100px;
     }
 
-    header h1 {
+    /* header h1 {
         margin-top: 30px;
         text-shadow: 2px 2px 2px black;
-        /* outline: 1px solid red; */
+        outline: 1px solid red;
     }
 
     .content-container {
-        /* outline: 13px solid purple; */
+        outline: 13px solid purple;
         height: 100%;
         width: 100%;
+    } */
+
+    .counter-container {
+        display: flex;
+        justify-content: center;
+        /* outline: 1px solid red; */
     }
 
     .counters{
