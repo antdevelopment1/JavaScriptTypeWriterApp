@@ -166,7 +166,7 @@ var UIModule = (function() {
 
         showModal: function(){
             // DOMElements.modal.modal('show');
-            alert('The test has ended.');
+            alert('The test has ended. How did you do?');
             
         },
 
