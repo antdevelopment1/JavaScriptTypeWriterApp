@@ -129,53 +129,55 @@ var UIModule = (function() {
         },
 
         fillModal: function(wpm){
-            var results;
-            if (wpm < 40) {
-                results = {
-                    type: 'turtle',
-                    image: 'turtle.jpeg',
-                    level: 'beginner'
-                }
-            } else if (wpm < 70) {
-                results = {
-                    type: 'horse',
-                    image: 'horse.jpeg',
-                    level: 'average'
-                }
-            }  else {
-                results = {
-                    type: 'puma',
-                    image: 'puma.jpeg',
-                    level: 'expert'
-                }
-            }
+            // var results;
+            // if (wpm < 40) {
+            //     results = {
+            //         type: 'turtle',
+            //         image: 'turtle.jpeg',
+            //         level: 'beginner'
+            //     }
+            // } else if (wpm < 70) {
+            //     results = {
+            //         type: 'horse',
+            //         image: 'horse.jpeg',
+            //         level: 'average'
+            //     }
+            // }  else {
+            //     results = {
+            //         type: 'puma',
+            //         image: 'puma.jpeg',
+            //         level: 'expert'
+            //     }
+            // }
 
 
-            var html = '<div class="result"><p>You are a %type%!</p><p>You type at a speed of %wpm% words per minute</p><img class="rounded-circle" width="250" height="250" src="images/%image%" alt="%alt%"></img></div>';
-            html = html.replace('%type%', results.type);
-            html = html.replace('%wpm%', wpm);
-            html = html.replace('%image%', results.image);
-            html = html.replace('%alt%', results.type);
+            // var html = '<div class="result"><p>You are a %type%!</p><p>You type at a speed of %wpm% words per minute</p><img class="rounded-circle" width="250" height="250" src="images/%image%" alt="%alt%"></img></div>';
+            // html = html.replace('%type%', results.type);
+            // html = html.replace('%wpm%', wpm);
+            // html = html.replace('%image%', results.image);
+            // html = html.replace('%alt%', results.type);
 
             // Insert html into form-group
-            DOMElements.nameInput.insertAdjacentHTML('beforebegin', html);
+            // DOMElements.nameInput.insertAdjacentHTML('beforebegin', html);
 
             // Store level in download button
             // DOMElements.download.setAttribute('level', results.level);
         }, 
 
         showModal: function(){
-            DOMElements.modal.modal('show');
+            // DOMElements.modal.modal('show');
+            alert('The test has ended.');
+            
         },
 
         // User Input
-        inputFocus: function(){
-            DOMElements.textInput.focus();
-        }, 
+        // inputFocus: function(){
+        //     DOMElements.textInput.focus();
+        // }, 
 
-        isNameEmpty: function(){}, 
+        // isNameEmpty: function(){}, 
 
-        flagNameInput: function(){},
+        // flagNameInput: function(){},
 
         spacePressed: function(event){
             return event.data == " ";

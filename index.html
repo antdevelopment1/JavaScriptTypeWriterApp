@@ -6,18 +6,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"> -->
         <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans" rel="stylesheet">
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
-        <div class="container-fluid">
-            <div class="text-center">
+        <div class="">
+            <div class="">
                 <header>
-                    <h1>Speed Typing Test</h1>
+                    <p>Speed Typing Test</p>
                 </header>
                 <div class="counters">
-                    <div class="col-3 measurement counter-container">
+                    <div class=" measurement counter-container">
                         <div class="meas_container">
                             <div class="typingIcon">
                                 <img src="images/speed2.png" class="speed">
@@ -31,7 +31,7 @@
                             <span id="wpmChange"></span>
                         </div>
                     </div>
-                    <div class="col-3 measurement counter-container">
+                    <div class=" measurement counter-container">
                         <div class="meas_container">
                             <div class="typingIcon">
                                 <img src="images/cpm.png" class="cpm">
@@ -45,7 +45,7 @@
                             <span id="cpmChange"></span>
                         </div>
                     </div>
-                    <div class="col-3 measurement counter-container">
+                    <div class=" measurement counter-container">
                         <div class="meas_container">
                             <div class="typingIcon">
                                 <img src="images/accuracy.png" class="accuracy">
@@ -59,7 +59,7 @@
                             <span id="accuracyChange"></span>
                         </div>
                     </div>
-                    <div class="col-3 measurement counter-container">
+                    <div class="measurement counter-container">
                         <div class="meas_container">
                             <div class="typingIcon">
                                 <img src="images/stopwatch.png" class="stopwatch">
@@ -72,11 +72,11 @@
                     </div>
                 </div>
 <!--                test words-->
-                <div id="content" class="text-center test-words"></div>
+                <div id="content" class="test-words"></div>
                 
 <!--                text input-->
                 <div class="text-input">
-                    <input type="text" placeholder="type here to begin test" class="text-center text" id="input">
+                    <input type="text" placeholder="type here to begin test" class="text" id="input">
                 </div>
                 
 <!--                keyboard-->
@@ -84,7 +84,7 @@
                 
 <!--                restart-->
                 <div class="restart">
-                    <button type="button" class="btn btn-primary btn-lg" onclick="location.reload()">Restart</button>
+                    <button type="button" class="restart-button" onclick="location.reload()">Restart</button>
                 </div>
                 
 <!--                modal-->
@@ -92,20 +92,20 @@
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title">You finished your test!</h5>
-                        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button> -->
+                        <!-- <h5 class="modal-title">You finished your test!</h5> -->
+                        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"> -->
+                          <!-- <span aria-hidden="true">&times;</span> -->
+                        <!-- </button> -->
                       </div>
                       <div class="modal-body">
                           <div class="form-group">
-                              <!-- <label for="name" class="sr-only">Enter your name: </label>
-                              <input type="text" class="form-control" id="name" placeholder="Your full name"> -->
-                          
+                              <!-- <label for="name" class="sr-only">Enter your name: </label> -->
+                              <!-- <input type="text" class="form-control" id="name" placeholder="Your full name"> -->
+                          <!--  -->
                           </div>
                       </div>
                       <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal" >Close</button>
+                        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal" >Close</button> -->
                         <!-- <button type="button" class="btn btn-info" id="download">Download your certificate</button> -->
                     
                       </div>

@@ -23,11 +23,6 @@ body{
        
     }
 
-    .text-center {
-        /* outline: 2px solid blue; */
-        /* display: flex; */
-    }
-
     header {
         /* outline: 2px solid green; */
         width: 100%;
@@ -35,19 +30,15 @@ body{
         margin-top: 100px;
     }
 
-    /* header h1 {
-        margin-top: 30px;
-        text-shadow: 2px 2px 2px black;
-        outline: 1px solid red;
+    p {
+        font-size: 50px;
+        letter-spacing: 1px;
+        margin: 50px 0 25px 0;
     }
 
-    .content-container {
-        outline: 13px solid purple;
+    .counter-container {
         height: 100%;
         width: 100%;
-    } */
-
-    .counter-container {
         display: flex;
         justify-content: center;
         /* outline: 1px solid red; */
@@ -108,7 +99,7 @@ body{
         height: 100%;
     }
     
-    #content{
+    .test-words {
         height: 200px;
         background-color: rgba(255,255,255,0.2);
         /* margin: 10px auto; */
@@ -120,6 +111,7 @@ body{
         border-radius: 5px;
         box-shadow: 3px 3px 3px black;
         /* outline: 1px solid red; */
+        text-align: center;
     }
     
     .change{
@@ -135,15 +127,17 @@ body{
         color: rgba(255, 255, 255, .9);
     }
 
+    .text {
+        /* outline: 1px solid purple; */
+        text-align: center;
+        border: none;
+        box-shadow: 3px 3px 3px black;
+    }
+
     .text::placeholder {
         color: rgba(255, 255, 255, .7);
     }
 
-    .text {
-        /* outline: 1px solid purple; */
-        border: none;
-        box-shadow: 3px 3px 3px black;
-    }
     .text:focus {
         outline: none;
     }
@@ -174,7 +168,7 @@ body{
         justify-content: center;
     }
     
-    .btn-primary{
+    .restart-button{
         background:rgba(0, 0, 0, .1);
         /* outline: 1px solid red; */
         border: 2px solid rgba(255, 255, 255, .4);
@@ -183,9 +177,10 @@ body{
         width: 200px;
         box-shadow: 3px 3px 3px black;
         font-size: 26px;
+        border-radius: 5px;
     }
     
-    .btn-primary:focus,.btn-primary:active,.btn-primary:hover{
+    .restart-button:focus,.restart-button:active,.restart-button:hover{
         background: rgba(0, 0, 0, .1);
         border: 2px solid rgba(255, 255, 255, .5);
     }
@@ -206,7 +201,20 @@ body{
     }
     
     .modal{
+        /* width: 100%; */
+        /* height: 100%; */
         color: black;
+        /* outline: 15px solid red; */
+    }
+
+    /* .modal-content {
+        width: 1000px;
+        height: 1000px;
+        outline: 5px solid blue;
+    } */
+
+    .modal-dialog {
+        /* outline: 10px solid red; */
     }
 
     .activeWord {
@@ -226,7 +234,8 @@ body{
     .result {
         font-size: 20px;
     }
-    
+
+  
 
     /* MEDIA QUERIES */
 
