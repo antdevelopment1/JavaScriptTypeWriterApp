@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: none;
+    /* outline: none; */
+    /* outline: 1px solid red; */
 }
 
 
@@ -32,6 +33,7 @@ body{
     }
 
     p {
+        /* outline: 2px solid green; */
         font-size: 50px;
         letter-spacing: 1px;
         margin: 50px 0 25px 0;
@@ -48,7 +50,7 @@ body{
     .counters{
         font-size: 30px;
         /* outline: 3px solid green; */
-        width: 90%;
+        width: 100%;
         /* padding: 0 25px 0 0; */
         margin: 0 auto;
         display: flex;
@@ -83,6 +85,7 @@ body{
     }
 
     .typingIcon .speed {
+         /* outline: 2px solid blue; */
         width:60px;
     }
 
@@ -118,6 +121,7 @@ body{
     .change{
         height: 25px;
         font-size: 18px;
+        /* outline: 1px solid blue; */
     }
 
     .text-input {
@@ -129,7 +133,7 @@ body{
     }
 
     .text {
-        /* outline: 1px solid purple; */
+        /* outline: 15px solid purple; */
         padding: 15px 20px;
         text-align: center;
         border: none;
@@ -147,7 +151,7 @@ body{
     #input{
         background-color:rgba(0, 0, 0, .1);
         width: 35%;
-        font-size: 40px;
+        font-size: 30px;
         /* padding: 10px; */
         color: #fff;
     }
@@ -231,61 +235,40 @@ body{
 
     .footer-container {
         display: flex;
-        /* flex-direction: row; */
         justify-content: center;
         align-items: center;
         width: 100%;
         height: 100%;
         margin-top: 100px;
-        /* padding-top: 10px; */
-        /* border-top: 3px solid rgba(0, 0, 0, .5); */
         text-shadow: 2px 2px 2px rgba(0, 0, 0, .7);
-        /* background-color:linear-gradient(rgba(0,0,0,.9), rgba(0,0,0,.9));  */
-        /* background-color: black; */
-        /* background-size: cover; */
-        /* background-repeat: no-repeat; */
         font-family: 'Open Sans Condensed', sans-serif;
-    }
-    
-    footer {
-        /* display: flex; */
-        /* height: 80px; */
-        /* outline: 1px solid red; */
-        /* margin: auto 0; */
     }
 
     footer p {
-        /* align-self: center; */
         font-size: 20px;
         letter-spacing: 4px;
         color: rgba(255, 255, 255, .6);
-        /* padding: 0; */
-    }
-    
-    .fish1 {
-        font-size: 25px;
-        color: rgba(38, 86, 163, 0.8);
-    }
-
-    .fish2 {
-        font-size: 25px;
-        color: rgba(87, 141, 36, 0.8);
-    }
-
-    .fish3 {
-        font-size: 25px;
-        color: rgba(196, 96, 30, 0.8);
+        /* outline: 1px solid red; */
     }
 
     .fish1,
     .fish2,
     .fish3 {
+        font-size: 25px;
         text-shadow: 3px 3px 3px rgba(0, 0, 0, .9);
     }
     
+    .fish1 {
+        color: rgba(38, 86, 163, 0.8);
+    }
 
+    .fish2 {
+        color: rgba(87, 141, 36, 0.8);
+    }
 
-  
+    .fish3 {
+        color: rgba(196, 96, 30, 0.8);
+    }
 
     /* MEDIA QUERIES */
 
@@ -293,19 +276,23 @@ body{
         header {
             margin-top: 0px;
         }
+
+        .meas_container{
+            height: 185px;
+            width: 185px;
+        }
     }
 
     @media screen and (max-width: 1100px) {    
-        
+        p {
+            /* outline: 2px solid green; */
+            font-size: 43px;
+        }
+
         .counters{
             font-size: 30px;
             /* outline: 3px solid green; */
             width: 80%;
-        }
-
-        .meas_container{
-            height: 140px;
-            width: 140px;
         }
     
         .typingIcon .speed {
@@ -332,13 +319,24 @@ body{
             /* outline: 1px solid blue; */
         }
 
-        #input{
+        /* #input{
             width: 55%;
-        }        
+        }         */
 
         .text::placeholder {
-            font-size: 18px;
+            font-size: 25px;
         }
+    }
+
+    @media screen and (max-width: 1000px) {
+        .meas_container{
+            height: 135px;
+            width: 135px;
+        }
+
+        #input{
+            width: 40%;
+        }        
     }
 
     @media screen and (max-width: 900px) {
@@ -354,8 +352,12 @@ body{
         }
 
         .text::placeholder {
-            font-size: 20px;
+            /* font-size: 20px; */
         }
+
+        #input{
+            width: 50%;
+        }  
     }
 
     @media screen and (max-width: 700px) {
@@ -374,11 +376,11 @@ body{
         }
 
         #input{
-            width: 65%;
-        }        
+            width: 55%;
+        }  
 
         .text::placeholder {
-            font-size: 18px;
+            /* font-size: 18px; */
         }
     }
 
@@ -394,6 +396,10 @@ body{
             width: 115px;
             border-radius: 5%;
         }
+
+        #input{
+            width: 60%;
+        }  
     }
 
     @media screen and (max-width: 500px) {
@@ -404,6 +410,10 @@ body{
         .title {
             font-size: 10px;
         }
+
+        #input{
+            width: 65%;
+        }  
     }
 
     @media screen and (max-width: 450px) {
@@ -411,6 +421,16 @@ body{
             height: 105px;
             width: 90px;
         }
+
+        #input{
+            width: 80%;
+        } 
+    }
+
+    @media screen and (max-width: 400px) {
+        #input{
+            width: 85%;
+        }  
     }
 
  
