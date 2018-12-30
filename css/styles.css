@@ -244,6 +244,10 @@ body{
         font-family: 'Open Sans Condensed', sans-serif;
     }
 
+    footer {
+        padding-bottom: 30px;
+    }
+
     footer p {
         font-size: 20px;
         letter-spacing: 4px;
@@ -334,10 +338,6 @@ body{
             /* outline: 2px solid red; */
             display: flex;
             justify-content: center;
-        }
-
-        footer {
-            padding-bottom: 0px;
         }
 
         footer p {
@@ -636,7 +636,6 @@ body{
             /* padding: 10px; */
         }  
         footer p {
-            font-size: 12px;
             letter-spacing: 1px;
             /* outline: 1px solid red; */
         }
