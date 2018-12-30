@@ -119,8 +119,8 @@ body{
     }
     
     .change{
-        height: 25px;
-        font-size: 18px;
+        /* height: 25px; */
+        /* font-size: 18px; */
         /* outline: 1px solid blue; */
     }
 
@@ -391,6 +391,10 @@ body{
             margin: auto;
         }
 
+        p {
+            font-size: 38px;
+        }
+
         .meas_container {
             height: 115px;
             width: 115px;
@@ -403,10 +407,16 @@ body{
     }
 
     @media screen and (max-width: 500px) {
+
+        .counters {
+            font-size: 20px;
+        }
+
         .meas_container {
             height: 105px;
             width: 100px;
         }
+
         .title {
             font-size: 10px;
         }
@@ -418,8 +428,12 @@ body{
 
     @media screen and (max-width: 450px) {
         .meas_container {
-            height: 105px;
+            height: 90px;
             width: 90px;
+        }
+
+        p {
+            font-size: 35px;
         }
 
         #input{
@@ -428,6 +442,12 @@ body{
     }
 
     @media screen and (max-width: 400px) {
+
+        .meas_container {
+            height: 80px;
+            width: 80px;
+        }
+
         #input{
             width: 85%;
         }  
