@@ -244,6 +244,10 @@ body{
         font-family: 'Open Sans Condensed', sans-serif;
     }
 
+    footer {
+        padding-bottom: 30px;
+    }
+
     footer p {
         font-size: 20px;
         letter-spacing: 4px;
@@ -326,6 +330,19 @@ body{
         .text::placeholder {
             font-size: 25px;
         }
+
+        .restart{
+            /* margin-top: 40px; */
+            margin-bottom: 0px;
+            opacity: 0.8;
+            /* outline: 2px solid red; */
+            display: flex;
+            justify-content: center;
+        }
+
+        footer p {
+            margin-top: 0;
+        }
     }
 
     @media screen and (max-width: 1000px) {
@@ -373,7 +390,9 @@ body{
     }
 
     @media screen and (max-width: 700px) {
-
+        p {
+            margin-bottom: 0;
+        }
         .counters {
             width: 100%;
         }
@@ -395,9 +414,31 @@ body{
             /* font-size: 18px; */
         }
 
+        .restart{
+            margin-top: 60px;
+            margin-bottom: 20px;
+        }
+
         .restart-button{
             /* outline: 1px solid red; */
             width: 30%;
+        }
+
+        /* .footer-container {
+            margin-top: 100px;
+        } */
+    
+        footer p {
+            font-size: 18px;
+            padding-bottom: 50px;
+            /* outline: 1px solid red; */
+        }
+    
+        .fish1,
+        .fish2,
+        .fish3 {
+            font-size: 23px;
+            text-shadow: 3px 3px 3px rgba(0, 0, 0, .9);
         }
     }
 
@@ -418,6 +459,11 @@ body{
             border-radius: 5%;
         }
 
+        .test-words {
+            margin-top: 60px;
+            margin-bottom: 50px;
+        }
+
         #input{
             width: 60%;
         }  
@@ -425,6 +471,23 @@ body{
         .restart-button{
             /* outline: 1px solid red; */
             width: 35%;
+        }
+
+        .restart{
+            margin-top: 50px;
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            font-size: 15px;
+            letter-spacing: 3px;
+            /* outline: 1px solid red; */
+        }
+    
+        .fish1,
+        .fish2,
+        .fish3 {
+            font-size: 20px;
         }
     }
 
@@ -446,7 +509,12 @@ body{
 
         #input{
             width: 65%;
-        }  
+        } 
+
+        .restart{
+            margin-top: 40px;
+            margin-bottom: 15px;
+        } 
 
         .restart-button{
             /* outline: 1px solid red; */
@@ -463,6 +531,11 @@ body{
 
         p {
             font-size: 30px;
+        }
+
+        .test-words {
+            margin-top: 55px;
+            margin-bottom: 45px;
         }
 
         .typingIcon .speed {
@@ -496,6 +569,18 @@ body{
             font-size: 25px;
             height: 60px;
         }
+
+        footer p {
+            font-size: 13px;
+            letter-spacing: 3px;
+            /* outline: 1px solid red; */
+        }
+    
+        .fish1,
+        .fish2,
+        .fish3 {
+            font-size: 17px;
+        }
     }
 
     @media screen and (max-width: 400px) {
@@ -507,6 +592,11 @@ body{
 
         p {
             font-size: 25px;
+        }
+
+        .test-words {
+            margin-top: 50px;
+            margin-bottom: 40px;
         }
 
         .typingIcon .speed {
@@ -531,8 +621,36 @@ body{
         }
 
         #input{
-            /* width: 85%; */
+            width: 85%;
+            font-size: 20px;
+        } 
+        
+        .text::placeholder {
+            font-size: 20px;
+        }
+
+        #input{
+            width: 85%;
+            /* font-size: 1px; */
+            /* height: 50px; */
+            /* padding: 10px; */
         }  
+        footer p {
+            letter-spacing: 1px;
+            /* outline: 1px solid red; */
+        }
+
+    }
+
+    @media screen and (max-width: 350px) {
+    
+        .fish1,
+        .fish2,
+        .fish3 {
+            font-size: 13px;
+        }
+    
+        
     }
 
  
