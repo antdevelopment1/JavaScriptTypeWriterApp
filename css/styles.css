@@ -336,7 +336,14 @@ body{
 
         #input{
             width: 40%;
-        }        
+        }
+        
+        .restart-button{
+            /* outline: 1px solid red; */
+            height: 70px;
+            width: 22%;
+            font-size: 30px;
+        }
     }
 
     @media screen and (max-width: 900px) {
@@ -358,6 +365,11 @@ body{
         #input{
             width: 50%;
         }  
+
+        .restart-button{
+            /* outline: 1px solid red; */
+            width: 25%;
+        }
     }
 
     @media screen and (max-width: 700px) {
@@ -382,6 +394,11 @@ body{
         .text::placeholder {
             /* font-size: 18px; */
         }
+
+        .restart-button{
+            /* outline: 1px solid red; */
+            width: 30%;
+        }
     }
 
     @media screen and (max-width: 600px) {
@@ -404,6 +421,11 @@ body{
         #input{
             width: 60%;
         }  
+
+        .restart-button{
+            /* outline: 1px solid red; */
+            width: 35%;
+        }
     }
 
     @media screen and (max-width: 500px) {
@@ -425,6 +447,11 @@ body{
         #input{
             width: 65%;
         }  
+
+        .restart-button{
+            /* outline: 1px solid red; */
+            height: 60px;
+        }
     }
 
     @media screen and (max-width: 450px) {
@@ -462,6 +489,13 @@ body{
         #input{
             width: 80%;
         } 
+
+        .restart-button{
+            /* outline: 1px solid red; */
+            width: 50%;
+            font-size: 25px;
+            height: 60px;
+        }
     }
 
     @media screen and (max-width: 400px) {
