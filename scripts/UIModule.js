@@ -88,7 +88,7 @@ var UIModule = (function() {
     var fadeElement = function (element) {
         element.style.opacity = 1;
         setTimeout(function() {
-            element.style.opacity = .8;
+            element.style.opacity = .7;
         }, 100)
     };
 
@@ -123,9 +123,9 @@ var UIModule = (function() {
             DOMElements.accuracy.innerHTML = results.accuracy + '%';
 
             // Update changes
-            updateChange(results.wpmChange, DOMElements.wpmChange);
-            updateChange(results.cpmChange, DOMElements.cpmChange);
-            updateChange(results.accuracyChange, DOMElements.accuracyChange);
+            // updateChange(results.wpmChange, DOMElements.wpmChange);
+            // updateChange(results.cpmChange, DOMElements.cpmChange);
+            // updateChange(results.accuracyChange, DOMElements.accuracyChange);
         },
 
         fillModal: function(wpm){
@@ -150,32 +150,36 @@ var UIModule = (function() {
                 }
             }
 
-
-            var html = '<div class="result"><p>You are a %type%!</p><p>You type at a speed of %wpm% words per minute</p><img class="rounded-circle" width="250" height="250" src="images/%image%" alt="%alt%"></img></div>';
-            html = html.replace('%type%', results.type);
-            html = html.replace('%wpm%', wpm);
-            html = html.replace('%image%', results.image);
-            html = html.replace('%alt%', results.type);
+            
+            // var html = '<div class="result"><p>You are a %type%!</p><p>You type at a speed of %wpm% words per minute</p><img class="rounded-circle" width="250" height="250" src="images/%image%" alt="%alt%"></img></div>';
+            var html = '<div class="result"></div>';
+            // html = html.replace('%type%', results.type);
+            // html = html.replace('%wpm%', wpm);
+            // html = html.replace('%image%', results.image);
+            // html = html.replace('%alt%', results.type);
 
             // Insert html into form-group
             DOMElements.nameInput.insertAdjacentHTML('beforebegin', html);
 
             // Store level in download button
-            DOMElements.download.setAttribute('level', results.level);
+            // DOMElements.download.setAttribute('level', results.level);
         }, 
 
         showModal: function(){
-            DOMElements.modal.modal('show');
+            // DOMElements.modal.modal('show');
+         alert('The test has ended. How did you do?');
+            
+            
         },
 
         // User Input
-        inputFocus: function(){
-            DOMElements.textInput.focus();
-        }, 
+        // inputFocus: function(){
+        //     DOMElements.textInput.focus();
+        // }, 
 
-        isNameEmpty: function(){}, 
+        // isNameEmpty: function(){}, 
 
-        flagNameInput: function(){},
+        // flagNameInput: function(){},
 
         spacePressed: function(event){
             return event.data == " ";

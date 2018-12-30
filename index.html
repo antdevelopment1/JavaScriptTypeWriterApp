@@ -6,21 +6,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans" rel="stylesheet">
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
-        <div class="container-fluid">
-            <div class="text-center">
+        <div class="">
+            <div class="">
                 <header>
-                    <h1>Typing Test</h1>
+                    <p>Speed Typing Test</p>
                 </header>
-                <div class="row">
-                    <div class="col-3 measurement">
+                <div class="counters">
+                    <div class=" measurement counter-container">
                         <div class="meas_container">
                             <div class="typingIcon">
-                                <img src="images/speed2.png" width="60">
+                                <img src="images/speed2.png" class="speed">
                             </div>
                             <div id="wpm" class="value">0
                             </div>
@@ -31,10 +32,10 @@
                             <span id="wpmChange"></span>
                         </div>
                     </div>
-                    <div class="col-3 measurement">
+                    <div class=" measurement counter-container">
                         <div class="meas_container">
                             <div class="typingIcon">
-                                <img src="images/cpm.png" width="30">
+                                <img src="images/cpm.png" class="cpm">
                             </div>
                             <div id="cpm" class="value">0
                             </div>
@@ -45,10 +46,10 @@
                             <span id="cpmChange"></span>
                         </div>
                     </div>
-                    <div class="col-3 measurement">
+                    <div class=" measurement counter-container">
                         <div class="meas_container">
                             <div class="typingIcon">
-                                <img src="images/accuracy.png" width="50">
+                                <img src="images/accuracy.png" class="accuracy">
                             </div>
                             <div id="accuracy" class="value">0%
                             </div>
@@ -59,10 +60,10 @@
                             <span id="accuracyChange"></span>
                         </div>
                     </div>
-                    <div class="col-3 measurement">
+                    <div class="measurement counter-container">
                         <div class="meas_container">
                             <div class="typingIcon">
-                                <img src="images/stopwatch.png" width="45">
+                                <img src="images/stopwatch.png" class="stopwatch">
                             </div>
                             <div id="timeLeft" class="value">60
                             </div>
@@ -71,21 +72,20 @@
                         </div>
                     </div>
                 </div>
-                
 <!--                test words-->
-                <div id="content" class="text-center"></div>
+                <div id="content" class="test-words"></div>
                 
 <!--                text input-->
-                <div>
-                    <input type="text" placeholder="type here" class="text-center" id="input">
+                <div class="text-input">
+                    <input type="text" placeholder="Type here to begin test..." class="text" id="input">
                 </div>
                 
 <!--                keyboard-->
-                <div class="keyboard"></div>
+                <!-- <div class="keyboard"></div> -->
                 
 <!--                restart-->
                 <div class="restart">
-                    <button type="button" class="btn btn-primary btn-lg" onclick="location.reload()">Restart</button>
+                    <button type="button" class="restart-button" onclick="location.reload()">Restart</button>
                 </div>
                 
 <!--                modal-->
@@ -93,28 +93,38 @@
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title">You finished your test!</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
+                        <!-- <h5 class="modal-title">You finished your test!</h5> -->
+                        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"> -->
+                          <!-- <span aria-hidden="true">&times;</span> -->
+                        <!-- </button> -->
                       </div>
                       <div class="modal-body">
                           <div class="form-group">
-                              <label for="name" class="sr-only">Enter your name: </label>
-                              <input type="text" class="form-control" id="name" placeholder="Your full name">
-                          
+                              <!-- <label for="name" class="sr-only">Enter your name: </label> -->
+                              <!-- <input type="text" class="form-control" id="name" placeholder="Your full name"> -->
+                          <!--  -->
                           </div>
                       </div>
                       <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-info" id="download">Download your certificate</button>
+                        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal" >Close</button> -->
+                        <!-- <button type="button" class="btn btn-info" id="download">Download your certificate</button> -->
                     
                       </div>
                     </div>
                   </div>
                 </div>
-                
+                <div class="footer-container">
+                    <footer>
+                        
+                        <p>&copyCopyright 2019 Locksley Logic
+                            <i class="fas fa-fish fish1"></i>
+                            <i class="fas fa-fish fish2"></i>
+                            <i class="fas fa-fish fish3"></i>
+                        </p>
+                    </footer>
+                </div>
             </div>
+                
         </div>
 
         <!-- Optional JavaScript -->
