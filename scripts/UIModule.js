@@ -123,9 +123,9 @@ var UIModule = (function() {
             DOMElements.accuracy.innerHTML = results.accuracy + '%';
 
             // Update changes
-            updateChange(results.wpmChange, DOMElements.wpmChange);
-            updateChange(results.cpmChange, DOMElements.cpmChange);
-            updateChange(results.accuracyChange, DOMElements.accuracyChange);
+            // updateChange(results.wpmChange, DOMElements.wpmChange);
+            // updateChange(results.cpmChange, DOMElements.cpmChange);
+            // updateChange(results.accuracyChange, DOMElements.accuracyChange);
         },
 
         fillModal: function(wpm){
@@ -150,8 +150,9 @@ var UIModule = (function() {
                 }
             }
 
-            var html;
+            
             // var html = '<div class="result"><p>You are a %type%!</p><p>You type at a speed of %wpm% words per minute</p><img class="rounded-circle" width="250" height="250" src="images/%image%" alt="%alt%"></img></div>';
+            var html = '<div class="result"></div>';
             // html = html.replace('%type%', results.type);
             // html = html.replace('%wpm%', wpm);
             // html = html.replace('%image%', results.image);
@@ -166,7 +167,8 @@ var UIModule = (function() {
 
         showModal: function(){
             // DOMElements.modal.modal('show');
-            alert('The test has ended. How did you do?');
+         alert('The test has ended. How did you do?');
+            
             
         },
 
