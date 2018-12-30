@@ -373,7 +373,9 @@ body{
     }
 
     @media screen and (max-width: 700px) {
-
+        p {
+            margin-bottom: 0;
+        }
         .counters {
             width: 100%;
         }
@@ -393,6 +395,11 @@ body{
 
         .text::placeholder {
             /* font-size: 18px; */
+        }
+
+        .restart{
+            margin-top: 60px;
+            margin-bottom: 20px;
         }
 
         .restart-button{
@@ -418,6 +425,11 @@ body{
             border-radius: 5%;
         }
 
+        .test-words {
+            margin-top: 60px;
+            margin-bottom: 50px;
+        }
+
         #input{
             width: 60%;
         }  
@@ -425,6 +437,11 @@ body{
         .restart-button{
             /* outline: 1px solid red; */
             width: 35%;
+        }
+
+        .restart{
+            margin-top: 50px;
+            margin-bottom: 15px;
         }
     }
 
@@ -446,7 +463,12 @@ body{
 
         #input{
             width: 65%;
-        }  
+        } 
+
+        .restart{
+            margin-top: 40px;
+            margin-bottom: 15px;
+        } 
 
         .restart-button{
             /* outline: 1px solid red; */
@@ -463,6 +485,11 @@ body{
 
         p {
             font-size: 30px;
+        }
+
+        .test-words {
+            margin-top: 55px;
+            margin-bottom: 45px;
         }
 
         .typingIcon .speed {
@@ -509,6 +536,11 @@ body{
             font-size: 25px;
         }
 
+        .test-words {
+            margin-top: 50px;
+            margin-bottom: 40px;
+        }
+
         .typingIcon .speed {
             width: 30px;
             /* height: 50%; */
@@ -531,7 +563,22 @@ body{
         }
 
         #input{
-            /* width: 85%; */
+            width: 85%;
+            font-size: 20px;
+        }  
+    }
+
+    @media screen and (max-width: 400px) {
+    
+        .text::placeholder {
+            font-size: 20px;
+        }
+
+        #input{
+            width: 85%;
+            /* font-size: 1px; */
+            /* height: 50px; */
+            /* padding: 10px; */
         }  
     }
 
