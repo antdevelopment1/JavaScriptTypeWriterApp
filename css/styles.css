@@ -326,6 +326,23 @@ body{
         .text::placeholder {
             font-size: 25px;
         }
+
+        .restart{
+            /* margin-top: 40px; */
+            margin-bottom: 0px;
+            opacity: 0.8;
+            /* outline: 2px solid red; */
+            display: flex;
+            justify-content: center;
+        }
+
+        footer {
+            padding-bottom: 0px;
+        }
+
+        footer p {
+            margin-top: 0;
+        }
     }
 
     @media screen and (max-width: 1000px) {
@@ -406,6 +423,23 @@ body{
             /* outline: 1px solid red; */
             width: 30%;
         }
+
+        /* .footer-container {
+            margin-top: 100px;
+        } */
+    
+        footer p {
+            font-size: 18px;
+            padding-bottom: 50px;
+            /* outline: 1px solid red; */
+        }
+    
+        .fish1,
+        .fish2,
+        .fish3 {
+            font-size: 23px;
+            text-shadow: 3px 3px 3px rgba(0, 0, 0, .9);
+        }
     }
 
     @media screen and (max-width: 600px) {
@@ -442,6 +476,18 @@ body{
         .restart{
             margin-top: 50px;
             margin-bottom: 15px;
+        }
+
+        footer p {
+            font-size: 15px;
+            letter-spacing: 3px;
+            /* outline: 1px solid red; */
+        }
+    
+        .fish1,
+        .fish2,
+        .fish3 {
+            font-size: 20px;
         }
     }
 
@@ -523,6 +569,18 @@ body{
             font-size: 25px;
             height: 60px;
         }
+
+        footer p {
+            font-size: 13px;
+            letter-spacing: 3px;
+            /* outline: 1px solid red; */
+        }
+    
+        .fish1,
+        .fish2,
+        .fish3 {
+            font-size: 17px;
+        }
     }
 
     @media screen and (max-width: 400px) {
@@ -565,11 +623,8 @@ body{
         #input{
             width: 85%;
             font-size: 20px;
-        }  
-    }
-
-    @media screen and (max-width: 400px) {
-    
+        } 
+        
         .text::placeholder {
             font-size: 20px;
         }
@@ -580,6 +635,23 @@ body{
             /* height: 50px; */
             /* padding: 10px; */
         }  
+        footer p {
+            font-size: 12px;
+            letter-spacing: 1px;
+            /* outline: 1px solid red; */
+        }
+
+    }
+
+    @media screen and (max-width: 350px) {
+    
+        .fish1,
+        .fish2,
+        .fish3 {
+            font-size: 13px;
+        }
+    
+        
     }
 
  
