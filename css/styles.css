@@ -415,6 +415,7 @@ body{
         .meas_container {
             height: 105px;
             width: 100px;
+            padding: 3px;
         }
 
         .title {
@@ -428,12 +429,34 @@ body{
 
     @media screen and (max-width: 450px) {
         .meas_container {
-            height: 90px;
+            height: 100px;
             width: 90px;
+            /* padding: 0; */
         }
 
         p {
-            font-size: 35px;
+            font-size: 30px;
+        }
+
+        .typingIcon .speed {
+            width: 35px;
+            /* height: 50%; */
+            /* outline: 1px solid red; */
+        }
+    
+        .typingIcon .cpm {
+            width:20px;
+            /* height: 65%; */
+        }
+    
+        .typingIcon .accuracy {
+            width: 20px;
+            /* height: 60%; */
+        }
+    
+        .typingIcon .stopwatch {
+            width: 25px;
+            /* height: 70%; */
         }
 
         #input{
@@ -444,12 +467,37 @@ body{
     @media screen and (max-width: 400px) {
 
         .meas_container {
-            height: 80px;
-            width: 80px;
+            height: 75px;
+            width: 65px;
+        }
+
+        p {
+            font-size: 25px;
+        }
+
+        .typingIcon .speed {
+            width: 30px;
+            /* height: 50%; */
+            /* outline: 1px solid red; */
+        }
+    
+        .typingIcon .cpm {
+            width:20px;
+            /* height: 65%; */
+        }
+    
+        .typingIcon .accuracy {
+            width: 20px;
+            /* height: 60%; */
+        }
+    
+        .typingIcon .stopwatch {
+            width: 20px;
+            /* height: 70%; */
         }
 
         #input{
-            width: 85%;
+            /* width: 85%; */
         }  
     }
 
