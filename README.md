@@ -45,11 +45,11 @@ This speed typewriter app is a front makeover of an online course. Below are bef
 
 ### Medium Breakpoint
 <p align='center'>
-<img src='readme/images/aftermedium.png' width="600" height="400"></img>
+<img src='readme/images/aftermedium.png' width="600" height="600"></img>
 </p>
 
 ### Small Breakpoint
 <p align='center'>
-<img src='readme/images/aftersmall.png' width="500" height="700"></img>
+<img src='readme/images/aftersmall.png' width="450" height="500"></img>
 </p>
 
