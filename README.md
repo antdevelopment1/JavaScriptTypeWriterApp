@@ -18,35 +18,38 @@ This speed typewriter app is a front makeover of an online course. Below are bef
 
 ## Speed Typing Test Before Images and Responsive Breakpoints - Bootstrap Layout
 
-<p>Large breakpoint</p>
+### Large breakpoint
 <p align='center'>
     <img src='readme/images/beforebig.png'></img>
 </p>
 
-<p>Medium Breakpoint</p>
-<p align='center'>
-    <img src='readme/images/beforemedium.png'></img>
-</p>
+### Medium Breakpoint
+<img src='readme/images/beforemedium.png'></img>
 
-<p>Small Breakpoint</p>
+
+### Small Breakpoint
 <p align='center'>
     <img src='readme/images/beforesmall.png'></img>
 </p>
 
 ## Speed Typing Test After Images and Responsive Breakpoints CSS Flexbox Layout
 
-<p>Large breakpoint</p>
+### Large breakpoint
 <p align='center'>
     <img src='readme/images/afterlargetop.png'></img>
 </p>
 
-<img src='readme/images/afterlargebottom.png' width="200" height="200"></img>
-
-<p>Medium Breakpoint</p>
-<img src='readme/images/aftermedium.png' width="200" height="200"></img>
-
-<p>Small Breakpoint</p>
 <p align='center'>
-    <img src='readme/images/aftersmall.png'></img>
+<img src='readme/images/afterlargebottom.png'></img>
+</p>
+
+### Medium Breakpoint
+<p align='center'>
+<img src='readme/images/aftermedium.png' width="600" height="400"></img>
+</p>
+
+### Small Breakpoint
+<p align='center'>
+<img src='readme/images/aftersmall.png' width="500" height="700"></img>
 </p>
 
