@@ -24,12 +24,13 @@ This speed typewriter app is a front makeover of an online course. Below are bef
 </p>
 
 ### Medium Breakpoint
-<img src='readme/images/beforemedium.png'></img>
-
+<p align='center'>
+<img src='readme/images/beforemedium.png' width="500" height="700"></img>
+</p>
 
 ### Small Breakpoint
 <p align='center'>
-    <img src='readme/images/beforesmall.png'></img>
+    <img src='readme/images/beforesmall.png' width="425" height="650"></img>
 </p>
 
 ## Speed Typing Test After Images and Responsive Breakpoints CSS Flexbox Layout
@@ -45,11 +46,11 @@ This speed typewriter app is a front makeover of an online course. Below are bef
 
 ### Medium Breakpoint
 <p align='center'>
-<img src='readme/images/aftermedium.png' width="600" height="600"></img>
+<img src='readme/images/aftermedium.png' width="500" height="700"></img>
 </p>
 
 ### Small Breakpoint
 <p align='center'>
-<img src='readme/images/aftersmall.png' width="450" height="500"></img>
+<img src='readme/images/aftersmall.png' width="450" height="700"></img>
 </p>
 
