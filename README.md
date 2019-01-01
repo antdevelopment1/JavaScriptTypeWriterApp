@@ -1,7 +1,7 @@
-# Speed Typewriter JavaScript App
+# Speed Typewriter JavaScript App Bootstrap to CSS Redesign
 
 ## What Is This Project About
-This speed typewriter app is a frontend redesign of an online course. Below are before and after images. This frontend application was converted from Bootstrap and redesigned using CSS Flexbox. 
+This speed typewriter app is a an online udemy project I converted from Boostrap to CSS using Flexbox. Below are before and after images. The objective with building this project was to gain a deeper understanding of JavaScript closures, modular code design patterns, and to gain fluency translating code across different technologies.
 
 ## Technologies used before
 * HTML
