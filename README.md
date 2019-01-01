@@ -11,8 +11,43 @@ This speed typewriter app is a front makeover of an online course. Below are bef
 * jQuery
 
 ## Technologies used after
- HTML
+* HTML
 * CSS - Flexbox
 * Vanilla JavaScript
 * jQuery
+
+## Speed Typing Test Before Images and Responsive Breakpoints - Bootstrap Layout
+
+<p>Large breakpoint</p>
+<p align='center'>
+    <img src='readme/images/beforebig.png'></img>
+</p>
+
+<p>Medium Breakpoint</p>
+<p align='center'>
+    <img src='readme/images/beforemedium.png'></img>
+</p>
+
+<p>Small Breakpoint</p>
+<p align='center'>
+    <img src='readme/images/beforesmall.png'></img>
+</p>
+
+## Speed Typing Test After Images and Responsive Breakpoints CSS Flexbox Layout
+
+<p>Large breakpoint</p>
+<p align='center'>
+    <img src='readme/images/afterlargetop.png'></img>
+    <img src='readme/images/afterlargebottom.png'></img>
+</p>
+
+<p>Medium Breakpoint</p>
+<p align='center'>
+    <img src='readme/images/aftermedium.png'></img>
+</p>
+
+<p>Small Breakpoint</p>
+<p align='center'>
+    <img src='readme/images/aftersmall.png'></img>
+</p>
 
