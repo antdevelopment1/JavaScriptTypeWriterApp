@@ -2,27 +2,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* outline: none; */
+    outline: none;
     /* outline: 1px solid red; */
 }
 
 
-/* body element */
-body{
+/* Landing Section */
+body {
        font-family: 'Quattrocento Sans', sans-serif;
-        /* background: url("./../images/aurora.jpg") no-repeat center center; */
-        /* background-attachment: fixed; */
-        /* background-size: cover;  */
         color: rgba(255, 255, 255, .9);
-        /* background-color: rgba(0, 0, 0, .9); */
-        /* padding: 50px; */
-        /* background: #4389A2; */
         height: 100%;
         width: 100%;
         background-image:linear-gradient(rgba(0,0,0,.05), rgba(0,0,0,.05)), url(./../images/underwater-802092_1280.jpg);
         background-size: cover;
-        background-repeat: no-repeat;
-       
+        background-repeat: no-repeat;   
     }
 
     header {
@@ -51,12 +44,9 @@ body{
         font-size: 30px;
         /* outline: 3px solid green; */
         width: 100%;
-        /* padding: 0 25px 0 0; */
         margin: 0 auto;
         display: flex;
-        /* flex-direction: column; */
         justify-content: center;
-        /* align-items: center; */
     }
 
     .meas_container{
@@ -106,7 +96,6 @@ body{
     .test-words {
         height: 360px;
         background-color: rgba(255,255,255,0.2);
-        /* margin: 10px auto; */
         font-size: 30px;
         width: 80%;
         overflow: hidden;
@@ -116,12 +105,6 @@ body{
         box-shadow: 3px 3px 3px black;
         /* outline: 1px solid red; */
         text-align: center;
-    }
-    
-    .change{
-        /* height: 25px; */
-        /* font-size: 18px; */
-        /* outline: 1px solid blue; */
     }
 
     .text-input {
@@ -152,7 +135,6 @@ body{
         background-color:rgba(0, 0, 0, .1);
         width: 35%;
         font-size: 30px;
-        /* padding: 10px; */
         color: #fff;
     }
 
@@ -199,17 +181,9 @@ body{
     }
     
     .modal{
-        /* width: 100%; */
-        /* height: 100%; */
         color: black;
         /* outline: 15px solid red; */
     }
-
-    /* .modal-content {
-        width: 1000px;
-        height: 1000px;
-        outline: 5px solid blue;
-    } */
 
     .modal-dialog {
         /* outline: 10px solid red; */
