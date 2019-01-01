@@ -64,7 +64,7 @@ This speed typewriter app is an online Udemy project I converted from Boostrap t
 ## Challenges and Coding Patterns Used In This Project
 
 
-<p>I found these coding pattern to be very interesting conceptually and beyond useful. It took some practice to visualize what was happening with closures but with practice, I quickly appreciated and became fond of what closures are capable of. This project incorporated techniques on DOM Manipulation, string manipulation, closures, event listeners and much more. </p>
+<p>I found these coding pattern to be very interesting conceptually and beyond useful. It took some practice to visualize what part each component played in this project but with practice, I quickly appreciated and became fond of these different patterns and their capabilities. This project incorporated techniques on DOM Manipulation, string manipulation, string randomization, closures, event listeners and much more. </p>
 
 ### IIFE, Closures, Public and Private Variables
 <p>Accesses variables and methods after the surrounding function has been invoked by returning and object with invokable methods.</p>
